@@ -9,5 +9,9 @@ subnet: jmeter: 10.0.4.0/24
 Validate template:
 $ az group deployment validate --resource-group jmeter --template-file azuredeploy.json --parameters @azuredeploy.parameters.json
 
-Deploy: 
-$ az group deployment create --resource-group jmeter --template-file azuredeploy.json --parameters @azuredeploy.parameters.json
+Deploy from root: 
+time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json
+
+To run test:
+Go to /opt/jmeter
+run sudo ./run.sh
