@@ -1,0 +1,13 @@
+Subscription > Resource providers needed:
+Microsoft.Network
+Microsoft.Storage
+Microsoft.Compute
+
+virtual network: es-vnet: 10.0.0.0/16
+subnet: jmeter: 10.0.4.0/24
+
+Validate template:
+$ az group deployment validate --resource-group jmeter --template-file azuredeploy.json --parameters @azuredeploy.parameters.json
+
+Deploy: 
+$ az group deployment create --resource-group jmeter --template-file azuredeploy.json --parameters @azuredeploy.parameters.json
