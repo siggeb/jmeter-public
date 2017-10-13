@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="Login_Code_Stage" elementType="Argument">
+            <stringProp name="Argument.name">Login_Code_Stage</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Code_Stage, 1991)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Login_Input" elementType="Argument">
+            <stringProp name="Argument.name">Login_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page,https://test-www.kicks.se/)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Product_Category" elementType="Argument">
+            <stringProp name="Argument.name">Product_Category</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page, https://test-www.kicks.se/makeup-4975c09d/bas/puder/pressat-puder/prep--prime-transparent-finishing-powderpressed)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page, https://test-www.kicks.se/makeup-4975c09d/bas/puder/pressat-puder/prep--prime-transparent-finishing-powderpressed)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Second_Product_Category" elementType="Argument">
+            <stringProp name="Argument.name">Second_Product_Category</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Category,https://test-www.kicks.se/makeup-4975c09d/ogon)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Second_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Second_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Page,https://test-www.kicks.se/dior/makeup/ogon/mascara/diorshow-iconic-overcurl-mascara-brown)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Checkout" elementType="Argument">
+            <stringProp name="Argument.name">Checkout</stringProp>
+            <stringProp name="Argument.value">${__P(Checkout,https://test-www.kicks.se/kassa)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Constant_Timer_ms" elementType="Argument">
+            <stringProp name="Argument.name">Constant_Timer_ms</stringProp>
+            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 5000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Ramp_Up_Period_sec</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Thread_Loop_Count</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Product_Page,https://test-www.kicks.se/clinique/makeup/concealer/bronzing-powder-golden)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Press_Xpath" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Press_Xpath</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Press_Xpath,.//*[@id=&apos;container&apos;]/div/div[1]/main/div[2]/div[1]/div[2]/section/div/button)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Cookie_Value" elementType="Argument">
+            <stringProp name="Argument.name">Cookie_Value</stringProp>
+            <stringProp name="Argument.value">${__P(Cookie_Value,1991)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Cookie_Name" elementType="Argument">
+            <stringProp name="Argument.name">Cookie_Name</stringProp>
+            <stringProp name="Argument.value">${__P(Cookie_Name,auth)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Driver" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Driver</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Driver,/usr/local/bin/phantomjs)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Chrome_Driver" elementType="Argument">
+            <stringProp name="Argument.name">Chrome_Driver</stringProp>
+            <stringProp name="Argument.value">${__P(Chrome_Driver, C:\apache-jmeter-3.1\chromedriver.exe)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PhantomJS" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${PhantomJS_Thread_Loop_Count}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${PhantomJS_Browsing_Users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${PhantomJS_Ramp_Up_Period_sec}</stringProp>
+        <longProp name="ThreadGroup.start_time">1481632370000</longProp>
+        <longProp name="ThreadGroup.end_time">1481632370000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig guiclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfigGui" testclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig" testname="bzm - PhantomJS Driver Config" enabled="true">
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_path">${PhantomJS_Driver}</stringProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_cli_args"></stringProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_ghostdriver_cli_args"></stringProp>
+        </com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Access to site" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Access to site" enabled="false">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+var cookie = new org.openqa.selenium.Cookie(&quot;auth&quot;,&quot;1991&quot;);
+
+
+//WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+//WDS.sampleResult.getLatency();
+//WDS.log.info(&quot;Sample started&quot;);
+
+
+
+WDS.browser.get(&apos;${Home_Page}&apos;)//opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.browser.manage().addCookie(cookie);
+
+
+//WDS.log.info(&quot;Sample ended - navigated to https://test-www.kicks.se/&quot;);
+//wait.until(conditions.presenceOfElementLocated(pkg.By.xpath(&apos;html/body/form/input&apos;)));
+//var inputField = WDS.browser.findElement(pkg.By.xpath(&quot;${Login_Input}&quot;)); //saves input field into inputField
+
+//inputField.sendKeys(&quot;${Login_Code_Stage}&quot;); // calls on LoginCodeStage that are specified in line 1
+//inputField.sendKeys(org.openqa.selenium.Keys.ENTER) //Press Enter
+
+//WDS.sampleResult.sampleEnd(); 
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Access to site" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Home_Page" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Home_Page" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Home_Page}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to https://test-www.kicks.se/&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Home_Page" enabled="true"/>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product_Category" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product_Category" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Product_Category}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Product_Category&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product_Category" enabled="true"/>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product_Page" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product_Page" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Product_Page}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Product_Page/&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product_Page" enabled="true"/>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second_Product_Category" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second_Product_Category" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Second_Product_Category}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Second_Product_Category&quot;);
+
+WDS.sampleResult.sampleEnd(); </stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Second_Product_Category" enabled="true"/>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second_Product_Page" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second_Product_Page" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Second_Product_Page}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - Second_Product_Page&quot;);
+
+WDS.sampleResult.sampleEnd(); </stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Second_Product_Page" enabled="true"/>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Checkout" enabled="true"/>
+          <hashTree>
+            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Checkout" enabled="true">
+              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Checkout}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Checkout&quot;);
+
+WDS.sampleResult.sampleEnd(); </stringProp>
+              <stringProp name="WebDriverSampler.parameters"></stringProp>
+              <stringProp name="WebDriverSampler.language">javascript</stringProp>
+            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+            <hashTree>
+              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Checkout" enabled="true"/>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
