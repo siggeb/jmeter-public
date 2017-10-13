@@ -139,7 +139,38 @@
           <stringProp name="PhantomJSDriverConfig.phantomjs_ghostdriver_cli_args"></stringProp>
         </com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Access to site" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Home_Page" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Home_Page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;https://integration.na-kd.com/en?auth_code=1994&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to https://test-www.kicks.se/&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Home_Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Access to site" enabled="false"/>
         <hashTree>
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Access to site" enabled="false">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -180,38 +211,7 @@ WDS.browser.manage().addCookie(cookie);
             </ConstantTimer>
             <hashTree/>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Home_Page" enabled="true"/>
-          <hashTree>
-            <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Home_Page" enabled="true">
-              <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
-var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
-var conditions = org.openqa.selenium.support.ui.ExpectedConditions
-var wait=new support_ui.WebDriverWait(WDS.browser, 10)
-var exception = null
-
-
-WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
-WDS.sampleResult.getLatency();
-WDS.log.info(&quot;Sample started&quot;);
-
-WDS.browser.get(&apos;${Home_Page}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
-WDS.log.info(&quot;Sample ended - navigated to https://test-www.kicks.se/&quot;);
-
-WDS.sampleResult.sampleEnd(); 
-</stringProp>
-              <stringProp name="WebDriverSampler.parameters"></stringProp>
-              <stringProp name="WebDriverSampler.language">javascript</stringProp>
-            </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
-            <hashTree>
-              <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Home_Page" enabled="true"/>
-              <hashTree/>
-              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
-                <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
-              </ConstantTimer>
-              <hashTree/>
-            </hashTree>
-          </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product_Category" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product_Category" enabled="false"/>
           <hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product_Category" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -242,7 +242,7 @@ WDS.sampleResult.sampleEnd();
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product_Page" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product_Page" enabled="false"/>
           <hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product_Page" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -273,7 +273,7 @@ WDS.sampleResult.sampleEnd();
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second_Product_Category" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second_Product_Category" enabled="false"/>
           <hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second_Product_Category" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -303,7 +303,7 @@ WDS.sampleResult.sampleEnd(); </stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second_Product_Page" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second_Product_Page" enabled="false"/>
           <hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second_Product_Page" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -333,7 +333,7 @@ WDS.sampleResult.sampleEnd(); </stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Checkout" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Checkout" enabled="false"/>
           <hashTree>
             <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Checkout" enabled="true">
               <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)

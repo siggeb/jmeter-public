@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm testpack/
+rm -r testpack/
 rm testpack.zip
 
 mkdir -p testpack
