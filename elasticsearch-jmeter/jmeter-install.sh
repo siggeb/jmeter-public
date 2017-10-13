@@ -182,6 +182,8 @@ install_jmeter()
             log "installing test pack"
             wget -O testpack.zip ${TESTPACK}
             unzip -q testpack.zip -d /opt/jmeter/
+            cp /opt/jmeter/testpack/* /opt/jmeter/
+            rm -r /opt/jmeter/testpack/
             chmod +x /opt/jmeter/run.sh
         fi
     fi
