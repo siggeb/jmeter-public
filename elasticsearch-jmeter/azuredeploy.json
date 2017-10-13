@@ -81,7 +81,7 @@
     },
     "testpack": {
       "type": "string",
-      "defaultValue": "https://github.com/siggeb/jmeter-public/raw/master/testpack.zip",
+      "defaultValue": "https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/testpack.zip",
       "metadata": {
         "description": "The location of the test jmx and run properties. This is extracted to the JMeter master node only, in /opt/jmeter"
       }
