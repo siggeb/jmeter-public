@@ -101,10 +101,12 @@ install_java()
 {
     log "Installing Java"
     add-apt-repository -y ppa:webupd8team/java
-    apt-get -y update  > /dev/null
+    mkdir -p /var/cache/oracle-jdk8-installer
+    wget -q http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u144-linux-x64.tar.gz -O /var/cache/oracle-jdk8-installer/jdk-8u144-linux-x64.tar.gz
+    apt-get -y update
     echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
     echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-    apt-get -y install oracle-java8-installer  > /dev/null
+    apt-get -y install oracle-java8-installer
 }
 
 install_jmeter_service()
@@ -195,8 +197,9 @@ install_jmeter()
 install_phantomjs()
 {
     log "Installing phantomjs"
+    apt-get -y update  > /dev/null
     apt-get -qy install wget default-jre-headless telnet iputils-ping unzip nodejs-legacy npm  > /dev/null
-	npm install -g phantomjs
+	npm install -g phantomjs > /dev/null
 }
 
 
@@ -208,7 +211,7 @@ then
 fi
 
 install_java
-install_jmeter
 install_phantomjs
+install_jmeter
 
 log "script complete"
