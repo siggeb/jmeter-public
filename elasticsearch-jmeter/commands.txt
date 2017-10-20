@@ -15,3 +15,9 @@ time az group deployment create --resource-group jmeter --template-file elastics
 To run test:
 Go to /opt/jmeter
 run sudo ./run.sh
+
+
+Troubleshooting:
+Installation log:
+sudo -i
+cat /var/lib/waagent/custom-script/download/stdout
