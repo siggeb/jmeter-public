@@ -23,9 +23,9 @@
     },
     "subNodeCount": {
       "type": "int",
-      "defaultValue": 5,
+      "defaultValue": 10,
       "allowedValues": [
-        1,
+        10,
         2,
         3,
         4,
