@@ -23,9 +23,9 @@
     },
     "subNodeCount": {
       "type": "int",
-      "defaultValue": 10,
+      "defaultValue": 40,
       "allowedValues": [
-        10,
+        40,
         2,
         3,
         4,
@@ -41,7 +41,7 @@
     },
     "subNodeSize": {
       "type": "string",
-      "defaultValue": "Standard_D5_v2",
+      "defaultValue": "Standard_D3_v2",
       "allowedValues": [
         "Standard_D2_v2",
         "Standard_D3_v2",

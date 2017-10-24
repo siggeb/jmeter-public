@@ -64,17 +64,17 @@
           </elementProp>
           <elementProp name="Constant_Timer_ms" elementType="Argument">
             <stringProp name="Argument.name">Constant_Timer_ms</stringProp>
-            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 5000)}</stringProp>
+            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 30000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,300)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Ramp_Up_Period_sec</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,60)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,120)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">

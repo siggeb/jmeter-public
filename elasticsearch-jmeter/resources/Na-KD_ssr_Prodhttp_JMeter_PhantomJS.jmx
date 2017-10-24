@@ -24,7 +24,7 @@
           </elementProp>
           <elementProp name="Home_Page" elementType="Argument">
             <stringProp name="Argument.name">Home_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Home_Page,https://prod.na-kd.com)}</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page,https://prod.na-kd.com?ssr=off)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Auth_Code" elementType="Argument">
@@ -34,22 +34,22 @@
           </elementProp>
           <elementProp name="Product_Category" elementType="Argument">
             <stringProp name="Argument.name">Product_Category</stringProp>
-            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com/en/dresses )}</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com/en/dresses?ssr=off )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Product_Page" elementType="Argument">
             <stringProp name="Argument.name">Product_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com.com/en/dresses/mini-dresses/get-the-scoop-tank-mini-dress-5b656a19 )}</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com.com/en/dresses/mini-dresses/get-the-scoop-tank-mini-dress-5b656a19?ssr=off )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Second_Product_Category" elementType="Argument">
             <stringProp name="Argument.name">Second_Product_Category</stringProp>
-            <stringProp name="Argument.value">${__P(Second_Product_Category, https://prod.na-kd.com/en/denim )}</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Category, https://prod.na-kd.com/en/denim?ssr=off )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Second_Product_Page" elementType="Argument">
             <stringProp name="Argument.name">Second_Product_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Second_Product_Page, https://prod.na-kd.com/en/denim/jeans/distressed-denim-jeans )}</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Page, https://prod.na-kd.com/en/denim/jeans/distressed-denim-jeans?ssr=off )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Checkout" elementType="Argument">
