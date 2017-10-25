@@ -24,12 +24,12 @@
           </elementProp>
           <elementProp name="Home_Page" elementType="Argument">
             <stringProp name="Argument.name">Home_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Home_Page,https://prod.na-kd.com?ssr=off)}</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page,https://prod.na-kd.com)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Auth_Code" elementType="Argument">
             <stringProp name="Argument.name">Auth_Code</stringProp>
-            <stringProp name="Argument.value">${__P(Auth_Code,/en?auth_code=1994)}</stringProp>
+            <stringProp name="Argument.value">${__P(Auth_Code,/en?auth_code=1994&amp;ssr=off)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Product_Category" elementType="Argument">
@@ -69,17 +69,17 @@
           </elementProp>
           <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Ramp_Up_Period_sec</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,120)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,60)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Thread_Loop_Count</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 1)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 10)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="    " elementType="Argument">

@@ -30,10 +30,17 @@ Validate template:
 Deploy from root: 
 `time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
+
+### Delete deployment
+time az group deployment delete --resource-group jmeter --name azuredeploy
+
 ### Troubleshooting infrastructure
 Installation log:
 `sudo -i`
 `cat /var/lib/waagent/custom-script/download/stdout`
+
+Remote hosts list is located in /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties
+remote_hosts=10.0.4.20,10.0.4.21,10.0.4.22,10.0.4.23,10.0.4.24,10.0.4.25,10.0.4.26,10.0.4.27,10.0.4.28,10.0.4.29
 
 ## Run test:
 ssh to boss-node
@@ -42,3 +49,26 @@ Go to /opt/jmeter
 run sudo ./run.sh
 
 
+
+
+$ time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json
+Long running operation wait cancelled.  Correlation ID: 34c23690-abfe-4d32-b284-4a8481e3f092
+
+real	47m29.658s
+user	0m3.106s
+sys	0m0.315s
+
+$ time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json
+Long running operation wait cancelled.  Correlation ID: 5bed07fa-9586-4950-91db-c0385954a77b
+
+real	48m52.389s
+user	0m3.274s
+sys	0m0.449s
+
+NO VMs Created!
+$ time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json
+Long running operation wait cancelled.  Correlation ID: 2f93fa58-2fae-4796-a6fc-707958aa62fe
+
+real	53m40.419s
+user	0m3.562s
+sys	0m0.365s

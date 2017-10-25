@@ -69,7 +69,7 @@
           </elementProp>
           <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,100)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,200)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
@@ -79,7 +79,7 @@
           </elementProp>
           <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Thread_Loop_Count</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 1)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 5)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="    " elementType="Argument">
