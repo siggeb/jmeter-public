@@ -1,5 +1,13 @@
+## TODO
+Fix ssh credentials to be a sustainable solution without a PW in repo (generate keys? does it work for slaves?)
+Cleanup unneccesary parameters in run script
+run.properties adapted
+Describe possible strategies for running, who is involved and what to fix?
+Add fixes so that they are possible to re-use?
+
+
 ## Background
-These scripts 
+These scripts create an infrastructure for running a distributed performance test with jmeter using Azure resources. It has been run with a total of 656 CPU cores on 40 D5 instances.
 
 
 ## Prerequisites
@@ -72,3 +80,12 @@ Long running operation wait cancelled.  Correlation ID: 2f93fa58-2fae-4796-a6fc-
 real	53m40.419s
 user	0m3.562s
 sys	0m0.365s
+
+## Runs
+https://rpm.newrelic.com/accounts/1649385/applications/54984775?tw%5Bend%5D=1508939904&tw%5Bstart%5D=1508938032#tab_hosts=breakout
+
+40 D5 instances
+${__P(Constant_Timer_ms, 30000)}
+${__P(PhantomJS_Browsing_Users,1000)}
+${__P(PhantomJS_Ramp_Up_Period_sec,1200)}
+${__P(PhantomJS_Thread_Loop_Count, 2)}

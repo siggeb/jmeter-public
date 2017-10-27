@@ -104,7 +104,7 @@
   "variables": {
     "apiVersion": "2015-06-15",
     "templateBaseUrl": "[concat(parameters('templateBase'), '/elasticsearch-jmeter/')]",
-    "storageAccountName": "[concat(substring(uniqueString(resourceGroup().id, 'jmeter'), 0, 6), 'jmeter2')]",
+    "storageAccountName": "[concat(substring(uniqueString(resourceGroup().id, 'jmeter'), 0, 6), 'jmeter5')]",
     "bossNodeIp": "10.0.4.10",
     "subNodesIpPrefix": "10.0.4.2",
     "networkSettings": {
