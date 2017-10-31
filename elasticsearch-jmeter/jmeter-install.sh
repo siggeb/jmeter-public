@@ -70,9 +70,6 @@ while getopts :hmr:j:t: optname; do
     r) # provide remote hosts
       REMOTE_RANGE=${OPTARG}
       ;;
-    j) # provide jarball
-      JARBALL=${OPTARG}
-      ;;
     t) # provide testpack
       TESTPACK=${OPTARG}
       ;;
@@ -158,12 +155,6 @@ install_jmeter()
     chmod u+x /opt/jmeter/apache-jmeter-3.1/bin/jmeter-server
     chmod u+x /opt/jmeter/apache-jmeter-3.1/bin/jmeter
 
-    if [ ${JARBALL} ];
-    then
-        log "installing jarball"
-        wget -O jarball.zip ${JARBALL}
-        unzip -q jarball.zip -d /opt/jmeter/apache-jmeter-3.1/lib/junit/
-    fi
     
     if [ ${IS_MASTER} -ne 1 ]; 
     then

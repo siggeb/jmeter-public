@@ -41,7 +41,7 @@
     },
     "subNodeSize": {
       "type": "string",
-      "defaultValue": "Standard_D5_v2",
+      "defaultValue": "Standard_D3_v2",
       "allowedValues": [
         "Standard_D2_v2",
         "Standard_D3_v2",
@@ -59,7 +59,7 @@
     },
     "bossNodeSize": {
       "type": "string",
-      "defaultValue": "Standard_D5_v2",
+      "defaultValue": "Standard_D3_v2",
       "allowedValues": [
         "Standard_D2_v2",
         "Standard_D3_v2",
@@ -72,25 +72,11 @@
         "description": "Size of the boss JMeter node"
       }
     },
-    "jarball": {
-      "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/elasticsearch-jmeter/resources/jarball.zip",
-      "metadata": {
-        "description": "The location of the test library and jar dependencies. This is extracted to every node under /opt/jmeter/apache-jmeter-2.13/lib/junit"
-      }
-    },
     "testpack": {
       "type": "string",
       "defaultValue": "https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/testpack.zip",
       "metadata": {
         "description": "The location of the test jmx and run properties. This is extracted to the JMeter master node only, in /opt/jmeter"
-      }
-    },
-    "esClusterName": {
-      "type": "string",
-      "defaultValue": "elasticsearch",
-      "metadata": {
-        "description": "The name of the Elasticsearch cluster to target"
       }
     },
     "templateBase": {
@@ -104,7 +90,7 @@
   "variables": {
     "apiVersion": "2015-06-15",
     "templateBaseUrl": "[concat(parameters('templateBase'), '/elasticsearch-jmeter/')]",
-    "storageAccountName": "[concat(substring(uniqueString(resourceGroup().id, 'jmeter'), 0, 6), 'jmeter5')]",
+    "storageAccountName": "[concat(substring(uniqueString(resourceGroup().id, 'jmeter'), 0, 6), 'jmeter6')]",
     "bossNodeIp": "10.0.4.10",
     "subNodesIpPrefix": "10.0.4.2",
     "networkSettings": {
@@ -140,7 +126,7 @@
           "autoUpgradeMinorVersion": true,
           "settings": {
             "fileUris": "[variables('setupScripts')]",
-            "commandToExecute": "[concat('bash jmeter-install.sh -mr ', variables('subNodesIpPrefix'), '-', parameters('subNodeCount'), ' -j ', parameters('jarball'), ' -t ', parameters('testpack'))]"
+            "commandToExecute": "[concat('bash jmeter-install.sh -mr ', variables('subNodesIpPrefix'), '-', parameters('subNodeCount'), ' -j ', ' -t ', parameters('testpack'))]"
           }
         },
         "sub": {
@@ -150,7 +136,7 @@
           "autoUpgradeMinorVersion": true,
           "settings": {
             "fileUris": "[variables('setupScripts')]",
-            "commandToExecute": "[concat('bash jmeter-install.sh -j ', parameters('jarball'))]"
+            "commandToExecute": "[concat('bash jmeter-install.sh -j ')]"
           }
         }
       }
