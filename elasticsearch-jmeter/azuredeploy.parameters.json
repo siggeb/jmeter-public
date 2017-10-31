@@ -10,6 +10,9 @@
         },
         "existingVirtualNetworkName": {
             "value": "es-vnet"
+        },
+        "sshKeyData": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC1MVfEnKLK/TcdDJS/EhPV5QUFkG/uXaBbkRLRm8sqGVzwRz2YtC/OkeoFn8bNiGKJBPC2ZhX1f22WGJtzEF912v/I/XaW+qcMUqkAS11wR6HexLF2+maTS7g89Ot/XzePtYxDbiHKpb39Rq3Rf7V27jEgwDVP9oiajrfbZhqRSSNxNWtayqZEZqVeDFAWUaa4JeTEgTXkRmy2jmK2V4uITe10yDlA1fkJKVZHxYy9Du3fYqeOEEbCZKubqksagGIWevw7OgvXFeBSr90scviDoO2Rhxv2EoEo9zhDK4Ij5Rh1/wJmbtRSik1D3VXfZeiXyqmy64tpcwYHlippvp4GzXSx+Q445gaqlybKUZx2KJWfKOMVXanZjxZFrcEtktunrbi3wqMgUDJbS/O25H/cJ1UjdnEmcFVNAR3pO+fLktjdV5AkPdx/VEK/LnkKsTGm/4CNJlxHD1G+llVQQ3HR9qfiWX528pKayOUW97/b57L194Z+JYfrxkGU3vgJKw3tO8nsFn6BaM3xt3EFp8W8lOGcjG4+B1/o8iU/L1G2lI9LcE3yi4uIm5fG4SD2+m106hgTGUAx7VOYgl0o1v1ISp3Zh0TrngnC9UX7AyZNqnI1xEG9VpxZ68qdYtfvmskx/rNdiIFl34IypEDByDjw99/Xi7FLpQ79kD2yVb76Ew== siggge@gmail.com"
         }
     }
 }

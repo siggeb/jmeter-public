@@ -21,6 +21,12 @@
         "description": "Existing virtual network name to deploy into which contains Elasticsearch nodes"
       }
     },
+    "sshKeyData": {
+          "type": "string",
+          "metadata": {
+            "description": "SSH rsa public key file as a string."
+        }
+    },
     "subNodeCount": {
       "type": "int",
       "defaultValue": 2,
@@ -91,6 +97,7 @@
     "apiVersion": "2015-06-15",
     "templateBaseUrl": "[concat(parameters('templateBase'), '/elasticsearch-jmeter/')]",
     "storageAccountName": "[concat(substring(uniqueString(resourceGroup().id, 'jmeter'), 0, 6), 'jmeter6')]",
+    "sshKeyPath": "[concat('/home/',parameters('adminUsername'),'/.ssh/authorized_keys')]",
     "bossNodeIp": "10.0.4.10",
     "subNodesIpPrefix": "10.0.4.2",
     "networkSettings": {
@@ -267,7 +274,17 @@
         "osProfile": {
           "computerName": "[concat('jmeter-boss')]",
           "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "adminPassword": "[parameters('adminPassword')]",
+          "linuxConfiguration": {
+            "ssh": {
+                "publicKeys": [
+                  {
+                    "path": "[variables('sshKeyPath')]",
+                    "keyData": "[parameters('sshKeyData')]"
+                  }
+                ]
+              }
+            }
         },
         "storageProfile": {
           "imageReference": "[variables('settings').imageReference]",
