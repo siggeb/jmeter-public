@@ -32,7 +32,6 @@ help()
     echo "  -h              view this help content"
     echo "  -m              install as a master node"
     echo "  -r <hosts>      set remote hosts (master only)"
-    echo "  -j <jarball>    location of the jarball to download and unzip"
     echo "  -t <testpack>   location of the test pack to download and unzip (master only)"
 }
 
