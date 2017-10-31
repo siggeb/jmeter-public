@@ -116,7 +116,7 @@ install_jmeter_service()
 
     start on starting
     script
-        /opt/jmeter/apache-jmeter-3.1/bin/jmeter-server
+        JVM_ARGS="-Xms1024m -Xmx6144m -XX:NewSize=512m -XX:MaxNewSize=6144m" && export JVM_ARGS && /opt/jmeter/apache-jmeter-3.1/bin/jmeter-server
     end script
 EOF
 
