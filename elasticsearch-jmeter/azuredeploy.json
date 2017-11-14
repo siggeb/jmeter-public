@@ -47,7 +47,7 @@
     },
     "subNodeSize": {
       "type": "string",
-      "defaultValue": "Standard_D3_v2",
+      "defaultValue": "Standard_D2_v2",
       "allowedValues": [
         "Standard_D2_v2",
         "Standard_D3_v2",
@@ -65,7 +65,7 @@
     },
     "bossNodeSize": {
       "type": "string",
-      "defaultValue": "Standard_D3_v2",
+      "defaultValue": "Standard_D2_v2",
       "allowedValues": [
         "Standard_D2_v2",
         "Standard_D3_v2",
@@ -80,14 +80,14 @@
     },
     "testpack": {
       "type": "string",
-      "defaultValue": "https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/testpack.zip",
+      "defaultValue": "https://github.com/jakobhellsten/jmeter-public/raw/master/elasticsearch-jmeter/testpack.zip",
       "metadata": {
         "description": "The location of the test jmx and run properties. This is extracted to the JMeter master node only, in /opt/jmeter"
       }
     },
     "templateBase": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/siggeb/jmeter-public/master",
+      "defaultValue": "https://raw.githubusercontent.com/jakobhellsten/jmeter-public/master",
       "metadata": {
         "description": "Change this value to your repo name if deploying from a fork"
       }
