@@ -32,6 +32,10 @@ virtual network: es-vnet: 10.0.0.0/16
 subnet: jmeter: 10.0.4.0/24
 
 ## Setup infrastructure
+Install Azure CLI
+Login with:
+`az login`
+
 Validate template:
 `time az group deployment validate --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
@@ -40,7 +44,7 @@ Deploy from root:
 
 
 ### Delete deployment
-time az group deployment delete --resource-group jmeter --name azuredeploy
+`time az group deployment delete --resource-group jmeter --name azuredeploy`
 
 ### Troubleshooting infrastructure
 Installation log:
