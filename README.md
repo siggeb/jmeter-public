@@ -9,7 +9,6 @@ Add fixes so that they are possible to re-use?
 ## Background
 These scripts create an infrastructure for running a distributed performance test with jmeter using Azure resources. It has been run with a total of 656 CPU cores on 40 D5 instances.
 
-
 ## Prerequisites
 
 ### MSDN subscription
@@ -21,6 +20,9 @@ Microsoft.Network
 Microsoft.Storage
 Microsoft.Compute
 
+#### Azure Cli installed
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
+
 #### Resource limits
 In a previous project we had scenarios that needed 600 CPU cores. Make sure to ask Microsooft to raise this limit with enough timeframe. Test the limits with the validate command below. 
 
@@ -31,15 +33,27 @@ Ask for more cores in the Dv2-series.
 virtual network: es-vnet: 10.0.0.0/16
 subnet: jmeter: 10.0.4.0/24
 
-## Setup infrastructure
+## Setup infrastructure in bash
 Validate template:
 `time az group deployment validate --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
 Deploy from root: 
 `time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
+##If you are a avid windows user and like to work with powershell do this:
+Connect your account:
+Login-AzureRmAccount
 
-### Delete deployment
+Select the subscription:
+Select-AzureRmSubscription -SubscriptionName XXX
+
+Test the template:
+Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile c:\<localpath>\azuredeploy.json (Error if something is wrong otherwise no output)
+
+Deploy the machines based upon the template: (In here you set the machine spec and how many "slave" nodes that will be running the jmx template)
+New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile C:\<localpath>\azuredeploy.json -TemplateParameterFile C:\<localpath>\azuredeploy.parameters.json
+
+### Delete deployment via script
 time az group deployment delete --resource-group jmeter --name azuredeploy
 
 ### Troubleshooting infrastructure
@@ -51,12 +65,10 @@ Remote hosts list is located in /opt/jmeter/apache-jmeter-3.1/bin/jmeter.propert
 remote_hosts=10.0.4.20,10.0.4.21,10.0.4.22,10.0.4.23,10.0.4.24,10.0.4.25,10.0.4.26,10.0.4.27,10.0.4.28,10.0.4.29
 
 ## Run test:
-ssh to boss-node
+ssh to boss-node (via putty if you are on windows)
 
 Go to /opt/jmeter
 run sudo ./run.sh
-
-
 
 
 $ time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json
