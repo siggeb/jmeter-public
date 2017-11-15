@@ -40,7 +40,7 @@ Validate template:
 Deploy from root: 
 `time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
-##If you are a avid windows user and like to work with powershell do this:
+## If you are a avid windows user and like to work with powershell do this:
 Connect your account:
 Login-AzureRmAccount
 
@@ -51,7 +51,7 @@ Test the template:
 Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile c:\<localpath>\azuredeploy.json (Error if something is wrong otherwise no output)
 
 Deploy the machines based upon the template: (In here you set the machine spec and how many "slave" nodes that will be running the jmx template)
-New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile C:\<localpath>\azuredeploy.json -TemplateParameterFile C:\<localpath>\azuredeploy.parameters.json
+New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json
 
 ### Delete deployment via script
 time az group deployment delete --resource-group jmeter --name azuredeploy
@@ -101,3 +101,12 @@ ${__P(Constant_Timer_ms, 30000)}
 ${__P(PhantomJS_Browsing_Users,1000)}
 ${__P(PhantomJS_Ramp_Up_Period_sec,1200)}
 ${__P(PhantomJS_Thread_Loop_Count, 2)}
+
+## Windows quirks
+To be able to add files to the boss node download putty and e.g. WinSCP
+
+- Upload the wanted files (run.sh and JMeter_PhantomJS_Template.jmx from local testpack folder) via WinSCP to the home/lyko folder on the boss node
+- Via putty go to the folder opt/jmeter and run the following to copy files from home/lyko : sudo cp /home/lyko/* .
+- Make the run.sh executable by chmod +x run.sh and if needed also sudo dos2unix run.sh to fix windows to unix line endings
+- Run the wanted amount of users (configured in JMeter_PhantomJS_Template.jmx) on the configured machines via sudo ./run.sh
+- Monitor the machines
