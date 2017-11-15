@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="NA-KD" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="Login_Code_Stage" elementType="Argument">
+            <stringProp name="Argument.name">Login_Code_Stage</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Code_Stage, Add the Code here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Login_Input" elementType="Argument">
+            <stringProp name="Argument.name">Login_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="      " elementType="Argument">
+            <stringProp name="Argument.name">      </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Home_Page" elementType="Argument">
+            <stringProp name="Argument.name">Home_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page,https://prod.na-kd.com)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Auth_Code" elementType="Argument">
+            <stringProp name="Argument.name">Auth_Code</stringProp>
+            <stringProp name="Argument.value">${__P(Auth_Code,/en?auth_code=1994&amp;ssr=off)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Product_Category" elementType="Argument">
+            <stringProp name="Argument.name">Product_Category</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com/en/dresses?ssr=off )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com.com/en/dresses/mini-dresses/get-the-scoop-tank-mini-dress-5b656a19?ssr=off )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Second_Product_Category" elementType="Argument">
+            <stringProp name="Argument.name">Second_Product_Category</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Category, https://prod.na-kd.com/en/denim?ssr=off )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Second_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Second_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Page, https://prod.na-kd.com/en/denim/jeans/distressed-denim-jeans?ssr=off )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Checkout" elementType="Argument">
+            <stringProp name="Argument.name">Checkout</stringProp>
+            <stringProp name="Argument.value">${__P(Checkout, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="     " elementType="Argument">
+            <stringProp name="Argument.name">     </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Constant_Timer_ms" elementType="Argument">
+            <stringProp name="Argument.name">Constant_Timer_ms</stringProp>
+            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 30000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,200)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Ramp_Up_Period_sec</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,60)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Thread_Loop_Count</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 10)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="    " elementType="Argument">
+            <stringProp name="Argument.name">    </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Product_Page, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Press_Xpath" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Press_Xpath</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Press_Xpath, Add Xpath here)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="    " elementType="Argument">
+            <stringProp name="Argument.name">    </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Driver" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Driver</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Driver,/usr/local/bin/phantomjs)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="PhantomJS" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${PhantomJS_Thread_Loop_Count}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${PhantomJS_Browsing_Users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${PhantomJS_Ramp_Up_Period_sec}</stringProp>
+        <longProp name="ThreadGroup.start_time">1481632370000</longProp>
+        <longProp name="ThreadGroup.end_time">1481632370000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+          <collectionProp name="AuthManager.auth_list"/>
+        </AuthManager>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies">
+            <elementProp name="__cfduid" elementType="Cookie" testname="__cfduid">
+              <stringProp name="Cookie.value">d2afd208b65b7b5325be0870237828d661507876183</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="optimizelyEndUserId" elementType="Cookie" testname="optimizelyEndUserId">
+              <stringProp name="Cookie.value">oeu1508239475537r0.2989864578044008</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="G_ENABLED_IDPS" elementType="Cookie" testname="G_ENABLED_IDPS">
+              <stringProp name="Cookie.value">google</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="frontend" elementType="Cookie" testname="frontend">
+              <stringProp name="Cookie.value">4g1jr0fe2k0cttf24fpn0gcp22</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="currency" elementType="Cookie" testname="currency">
+              <stringProp name="Cookie.value">SEK</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="_ga" elementType="Cookie" testname="_ga">
+              <stringProp name="Cookie.value">GA1.2.2028965982.1508239475</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="optimizelySegments" elementType="Cookie" testname="optimizelySegments">
+              <stringProp name="Cookie.value">{}</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="optimizelyBuckets" elementType="Cookie" testname="optimizelyBuckets">
+              <stringProp name="Cookie.value">{}</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="stc112125" elementType="Cookie" testname="stc112125">
+              <stringProp name="Cookie.value">tsa:1508239476994.926937375.0639458.08883731897182345.:20171017120008|env:1|20171117112436|20171017120008|2|1020551:20181017113008|uid:1508239476994.1559455599.2405648.112125.1613826237:20181017113008|srchist:1020551:1:20171117112436:20181017113008</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="_ju_dc" elementType="Cookie" testname="_ju_dc">
+              <stringProp name="Cookie.value">1c7db970-9167-11e7-b65e-17a399634267</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="ARRAffinity" elementType="Cookie" testname="ARRAffinity">
+              <stringProp name="Cookie.value">d0042200c77a1199c850c7176db8610acbf04817764a26f15f7b6cc1df7fc64f</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="Culture" elementType="Cookie" testname="Culture">
+              <stringProp name="Cookie.value">en-US</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="CountryCode" elementType="Cookie" testname="CountryCode">
+              <stringProp name="Cookie.value">SWE</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="auth" elementType="Cookie" testname="auth">
+              <stringProp name="Cookie.value">1994</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name=".ASPXANONYMOUS" elementType="Cookie" testname=".ASPXANONYMOUS">
+              <stringProp name="Cookie.value">LEo4R0JvHmNj8vX1JenRP20rNKgGZcg6qIWKRkMSMwUAOsOGomqeNipyowogI0J47kkG6EYQAjN_Qe86I02AHPRimzkfsNmjrEO-UBmlSWxgHi9f2fP_-kc0oSjdJfRcWFrpng2</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="ASP.NET_SessionId" elementType="Cookie" testname="ASP.NET_SessionId">
+              <stringProp name="Cookie.value">4zprx5ka0df5niadhgps5kcz</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="breakpoint" elementType="Cookie" testname="breakpoint">
+              <stringProp name="Cookie.value">6</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="ApptusSessionId" elementType="Cookie" testname="ApptusSessionId">
+              <stringProp name="Cookie.value">02ad45b5bf8c44958f5246b305e27899</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+            <elementProp name="__zlcmid" elementType="Cookie" testname="__zlcmid">
+              <stringProp name="Cookie.value">iygoiSPkBcWwUB</stringProp>
+              <stringProp name="Cookie.domain"></stringProp>
+              <stringProp name="Cookie.path"></stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+          <boolProp name="clearEachIteration">true</boolProp>
+          <boolProp name="useExpires">false</boolProp>
+        </CacheManager>
+        <hashTree/>
+        <com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig guiclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfigGui" testclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig" testname="bzm - PhantomJS Driver Config" enabled="true">
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_path">${PhantomJS_Driver}</stringProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_cli_args"></stringProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_ghostdriver_cli_args"></stringProp>
+        </com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Home_Page" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Home Page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Home_Page}&apos;+&apos;${Auth_Code}&apos;) 
+WDS.log.info(&quot;Sample ended - navigated to ${Home_Page}&quot;+&apos;${Auth_Code}&apos;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Home Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product Page" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product Page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Product_Page}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Product Page/&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Add To Cart" enabled="false"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="add to cart" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+{items: {2-1001-100283-1919-006: {newQuantity: 1, previousQuantity: 0}}, id: 0.021919224286677474}
+data={&quot;items&quot;: {&quot;2-1001-100283-1919-006&quot;: {&quot;newQuantity&quot;: 1, &quot;previousQuantity&quot;: 0}}, &quot;id&quot;: 0.021919224286677474}</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product Category" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product Category" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Product_Category}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Product Category&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product Category" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second Product Page" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second Product Page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Second_Product_Page}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - Second Product Page&quot;);
+
+WDS.sampleResult.sampleEnd(); </stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Second Product Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second Product Category" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second Product Category" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Second_Product_Category}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Second Product Category&quot;);
+
+WDS.sampleResult.sampleEnd(); </stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Second Product Category" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Checkout" enabled="false"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Checkout" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Checkout}&apos;) //opens website specified in &apos;https://test-www.kicks.se/&apos;
+WDS.log.info(&quot;Sample ended - navigated to Checkout&quot;);
+
+WDS.sampleResult.sampleEnd(); </stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Checkout" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="POST to Cart" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST to Cart" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;items&quot;:{&quot;2-1001-100283-1919-001&quot;:{&quot;newQuantity&quot;:1,&quot;previousQuantity&quot;:0}},&quot;id&quot;:0.39621830163154304}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">prod.na-kd.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">cart/update</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="TestPlan.comments">https://prod.na-kd.com/cart/update?scope</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="origin" elementType="Header">
+                  <stringProp name="Header.name">origin</stringProp>
+                  <stringProp name="Header.value">https://prod.na-kd.com</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,sv-SE;q=0.8,sv;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="x-requested-with" elementType="Header">
+                  <stringProp name="Header.name">x-requested-with</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="cookie" elementType="Header">
+                  <stringProp name="Header.name">cookie</stringProp>
+                  <stringProp name="Header.value">__cfduid=d2afd208b65b7b5325be0870237828d661507876183; optimizelyEndUserId=oeu1508239475537r0.2989864578044008; G_ENABLED_IDPS=google; frontend=4g1jr0fe2k0cttf24fpn0gcp22; currency=SEK; _ga=GA1.2.2028965982.1508239475; optimizelySegments=%7B%7D; optimizelyBuckets=%7B%7D; stc112125=tsa:1508239476994.926937375.0639458.08883731897182345.:20171017120008|env:1%7C20171117112436%7C20171017120008%7C2%7C1020551:20181017113008|uid:1508239476994.1559455599.2405648.112125.1613826237:20181017113008|srchist:1020551%3A1%3A20171117112436:20181017113008; _ju_dc=1c7db970-9167-11e7-b65e-17a399634267; ARRAffinity=d0042200c77a1199c850c7176db8610acbf04817764a26f15f7b6cc1df7fc64f; Culture=en-US; CountryCode=SWE; auth=1994; .ASPXANONYMOUS=LEo4R0JvHmNj8vX1JenRP20rNKgGZcg6qIWKRkMSMwUAOsOGomqeNipyowogI0J47kkG6EYQAjN_Qe86I02AHPRimzkfsNmjrEO-UBmlSWxgHi9f2fP_-kc0oSjdJfRcWFrpng2; ASP.NET_SessionId=4zprx5ka0df5niadhgps5kcz; breakpoint=6; ApptusSessionId=02ad45b5bf8c44958f5246b305e27899; __zlcmid=iygoiSPkBcWwUB</stringProp>
+                </elementProp>
+                <elementProp name="content-length" elementType="Header">
+                  <stringProp name="Header.name">content-length</stringProp>
+                  <stringProp name="Header.value">100</stringProp>
+                </elementProp>
+                <elementProp name=":path" elementType="Header">
+                  <stringProp name="Header.name">:path</stringProp>
+                  <stringProp name="Header.value">/cart/update?scope</stringProp>
+                </elementProp>
+                <elementProp name="pragma" elementType="Header">
+                  <stringProp name="Header.name">pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="x-client-version" elementType="Header">
+                  <stringProp name="Header.name">x-client-version</stringProp>
+                  <stringProp name="Header.value">0.0.1979</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name=":authority" elementType="Header">
+                  <stringProp name="Header.name">:authority</stringProp>
+                  <stringProp name="Header.value">prod.na-kd.com</stringProp>
+                </elementProp>
+                <elementProp name="referer" elementType="Header">
+                  <stringProp name="Header.name">referer</stringProp>
+                  <stringProp name="Header.value">https://prod.na-kd.com/en/dresses/mini-dresses/get-the-scoop-tank-mini-dress</stringProp>
+                </elementProp>
+                <elementProp name=":scheme" elementType="Header">
+                  <stringProp name="Header.name">:scheme</stringProp>
+                  <stringProp name="Header.value">https</stringProp>
+                </elementProp>
+                <elementProp name=":method" elementType="Header">
+                  <stringProp name="Header.name">:method</stringProp>
+                  <stringProp name="Header.value">POST</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <stringProp name="RandomTimer.range">0.0</stringProp>
+              <stringProp name="ConstantTimer.delay">0.0</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+            <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="POST to Cart" enabled="true">
+              <boolProp name="ResultCollector.error_logging">false</boolProp>
+              <objProp>
+                <name>saveConfig</name>
+                <value class="SampleSaveConfiguration">
+                  <time>true</time>
+                  <latency>true</latency>
+                  <timestamp>true</timestamp>
+                  <success>true</success>
+                  <label>true</label>
+                  <code>true</code>
+                  <message>true</message>
+                  <threadName>true</threadName>
+                  <dataType>true</dataType>
+                  <encoding>false</encoding>
+                  <assertions>true</assertions>
+                  <subresults>true</subresults>
+                  <responseData>false</responseData>
+                  <samplerData>false</samplerData>
+                  <xml>false</xml>
+                  <fieldNames>true</fieldNames>
+                  <responseHeaders>false</responseHeaders>
+                  <requestHeaders>false</requestHeaders>
+                  <responseDataOnError>false</responseDataOnError>
+                  <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                  <assertionsResultsToSave>0</assertionsResultsToSave>
+                  <bytes>true</bytes>
+                  <sentBytes>true</sentBytes>
+                  <threadCounts>true</threadCounts>
+                  <idleTime>true</idleTime>
+                  <connectTime>true</connectTime>
+                </value>
+              </objProp>
+              <stringProp name="filename"></stringProp>
+            </ResultCollector>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
