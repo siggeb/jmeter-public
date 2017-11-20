@@ -48,7 +48,7 @@ Select the subscription:
 Select-AzureRmSubscription -SubscriptionName XXX
 
 Test the template:
-Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile c:\<localpath>\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json (Error if something is wrong otherwise no output)
+Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json (Error if something is wrong otherwise no output)
 
 Deploy the machines based upon the template: (In here you set the machine spec and how many "slave" nodes that will be running the jmx template)
 New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json
