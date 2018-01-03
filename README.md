@@ -107,7 +107,7 @@ To be able to add files to the boss node download putty and e.g. WinSCP
 
 - Upload the wanted files (run.sh and JMeter_PhantomJS_Template.jmx from local testpack folder) via WinSCP to the home/lyko folder on the boss node
 - Via putty go to the folder opt/jmeter and run the following to copy files from home/lyko : sudo cp /home/lyko/* .
-- Make the run.sh executable by chmod +x run.sh 
+- Make the run.sh executable by sudo chmod +x run.sh 
 - If needed also run sudo dos2unix run.sh to fix windows to unix line endings (install via sudo apt-get install dos2unix)
 - Run the wanted amount of users (configured in JMeter_PhantomJS_Template.jmx) on the configured machines via sudo ./run.sh
 - Monitor the machines
