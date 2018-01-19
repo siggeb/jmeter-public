@@ -113,4 +113,4 @@ To be able to add files to the boss node download putty and e.g. WinSCP
 - Monitor the machines
 
 ## Problems installing Jmeter
-Sometimes jmeter is not installed on the subnodes which makes the deployment fail. You cannot run the load test either then as the subnodes are not all capable of running the jmeter template. A workaround for this is to find which subnodes that are not installed correctly and remove their ip-adresses from the remote_hosts list in the file /opt/jmeter/jmeter-3.1/bin/jmeter.properties
+Sometimes jmeter is not installed on the subnodes which makes the deployment fail. You cannot run the load test either then as the subnodes are not all capable of running the jmeter template. A workaround for this is to find which subnodes that are not installed correctly and remove their ip-adresses from the remote_hosts list in the file /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties
