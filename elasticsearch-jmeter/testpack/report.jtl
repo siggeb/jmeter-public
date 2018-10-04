@@ -1,0 +1,224 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,Latency,IdleTime,Connect
+1510710408200,30394,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:25563"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710436072\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/d7dcdee0-c9a6-11e7-8fae-afc4cea32ba7/element/:wdc:1510710436072/click""}}
+Command duration or timeout: 2.48 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub2', ip: '10.0.4.22', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=753791985, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d7dcdee0-c9a6-11e7-8fae-afc4cea32ba7",Thread Group 1-1,text,false,,3801,0,25,25,0,0,0
+1510710408086,34175,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:7726"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710440054\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/d7cadd80-c9a6-11e7-b698-73cf8ffa0d01/element/:wdc:1510710440054/click""}}
+Command duration or timeout: 2.16 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub3', ip: '10.0.4.23', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=343284172, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d7cadd80-c9a6-11e7-b698-73cf8ffa0d01",Thread Group 1-1,text,false,,3800,0,25,25,0,0,0
+1510710410030,37710,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:14258"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710444024\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/d8f098d0-c9a6-11e7-a29f-95f0bb0744dc/element/:wdc:1510710444024/click""}}
+Command duration or timeout: 3.67 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub0', ip: '10.0.4.20', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=1093410612, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d8f098d0-c9a6-11e7-a29f-95f0bb0744dc",Thread Group 1-4,text,false,,3802,0,25,25,0,0,0
+1510710411628,41321,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:12634"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710447825\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/d9e3f980-c9a6-11e7-9988-d996515f142a/element/:wdc:1510710447825/click""}}
+Command duration or timeout: 5.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub4', ip: '10.0.4.24', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=104340237, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d9e3f980-c9a6-11e7-9988-d996515f142a",Thread Group 1-6,text,false,,3801,0,25,25,0,0,0
+1510710418554,87707,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:26916"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710494992\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/de058fb0-c9a6-11e7-9c0f-330ac700e9b2/element/:wdc:1510710494992/click""}}
+Command duration or timeout: 11.22 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub1', ip: '10.0.4.21', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, socksUsername=null, socksPassword=null, autodetect=false, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=291387337, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: de058fb0-c9a6-11e7-9c0f-330ac700e9b2",Thread Group 1-18,text,false,,3802,0,25,25,0,0,0
+1510710413800,40082,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:26484"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710448052\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/db3076b0-c9a6-11e7-b534-55a2c57b9bf4/element/:wdc:1510710448052/click""}}
+Command duration or timeout: 5.75 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub2', ip: '10.0.4.22', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=126334717, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: db3076b0-c9a6-11e7-b534-55a2c57b9bf4",Thread Group 1-10,text,false,,3801,0,24,24,0,0,0
+1510710410176,69952,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:19756"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710475589\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/d9086690-c9a6-11e7-94cd-df81b0317204/element/:wdc:1510710475589/click""}}
+Command duration or timeout: 4.50 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub2', ip: '10.0.4.22', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=1381116264, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d9086690-c9a6-11e7-94cd-df81b0317204",Thread Group 1-4,text,false,,3802,0,23,23,0,0,0
+1510710411800,139629,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,262214,0,22,22,0,0,0
+1510710411866,38772,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:6521"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710448912\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/da07fc40-c9a6-11e7-8e21-f7145648bfec/element/:wdc:1510710448912/click""}}
+Command duration or timeout: 1.68 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub3', ip: '10.0.4.23', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=1093410612, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da07fc40-c9a6-11e7-8e21-f7145648bfec",Thread Group 1-7,text,false,,3801,0,24,24,0,0,0
+1510710414602,36524,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:11656"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710448620\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/dba8b3f0-c9a6-11e7-b35e-c17a014a5962/element/:wdc:1510710448620/click""}}
+Command duration or timeout: 2.47 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub3', ip: '10.0.4.23', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=846062203, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dba8b3f0-c9a6-11e7-b35e-c17a014a5962",Thread Group 1-11,text,false,,3801,0,23,23,0,0,0
+1510710413973,60925,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:29216"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710469851\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/db4d9ba0-c9a6-11e7-8a67-9d7240195b8f/element/:wdc:1510710469851/click""}}
+Command duration or timeout: 5.00 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub3', ip: '10.0.4.23', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=2063357010, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: db4d9ba0-c9a6-11e7-8a67-9d7240195b8f",Thread Group 1-10,text,false,,3802,0,22,22,0,0,0
+1510710417887,63656,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:21403"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710474063\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/dda2af30-c9a6-11e7-b19c-f7a622b7d1ac/element/:wdc:1510710474063/click""}}
+Command duration or timeout: 7.42 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub3', ip: '10.0.4.23', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=302333611, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dda2af30-c9a6-11e7-b19c-f7a622b7d1ac",Thread Group 1-17,text,false,,3801,0,21,21,0,0,0
+1510710413422,143257,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,266011,0,20,20,0,0,0
+1510710415820,45905,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:23315"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710457567\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/dc652620-c9a6-11e7-9a3b-83400ba780e6/element/:wdc:1510710457567/click""}}
+Command duration or timeout: 4.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub4', ip: '10.0.4.24', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=1720386905, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dc652620-c9a6-11e7-9a3b-83400ba780e6",Thread Group 1-13,text,false,,3802,0,24,24,0,0,0
+1510710410848,150813,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,275449,0,23,23,0,0,0
+1510710414266,157755,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,273941,0,24,24,0,0,0
+1510710409981,191131,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,276895,0,24,24,0,0,0
+1510710410776,150269,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,272614,0,21,21,0,0,0
+1510710415006,146897,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,264960,0,20,20,0,0,0
+1510710409405,152978,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,264697,0,19,19,0,0,0
+1510710408796,155413,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,258815,0,18,18,0,0,0
+1510710415904,155825,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,269729,0,17,17,0,0,0
+1510710416788,158298,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,272453,0,16,16,0,0,0
+1510710412568,163568,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,264499,0,15,15,0,0,0
+1510710419221,165235,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,269264,0,14,14,0,0,0
+1510710418576,165965,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,259880,0,14,14,0,0,0
+1510710422535,163378,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-23,text,true,,263840,0,12,12,0,0,0
+1510710417393,171052,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,260914,0,11,11,0,0,0
+1510710416512,174889,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,270588,0,10,10,0,0,0
+1510710421105,171084,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-21,text,true,,271975,0,9,9,0,0,0
+1510710411204,181217,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,272083,0,8,8,0,0,0
+1510710413212,180398,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,273143,0,7,7,0,0,0
+1510710423271,170421,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-24,text,true,,262307,0,7,7,0,0,0
+1510710421977,173133,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-22,text,true,,260760,0,5,5,0,0,0
+1510710414752,180432,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,260800,0,5,5,0,0,0
+1510710417993,179062,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,262700,0,3,3,0,0,0
+1510710423776,176660,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-25,text,true,,269682,0,2,2,0,0,0
+1510710420784,184789,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:25836"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710604866\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/df56eee0-c9a6-11e7-a53c-e5bef70cfdd1/element/:wdc:1510710604866/click""}}
+Command duration or timeout: 666 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub2', ip: '10.0.4.22', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=1921621285, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: df56eee0-c9a6-11e7-a53c-e5bef70cfdd1",Thread Group 1-20,text,false,,3806,0,1,1,0,0,0
+1510710416434,153129,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,263615,0,19,19,0,0,0
+1510710409286,163669,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,262238,0,18,18,0,0,0
+1510710416710,157045,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,263005,0,17,17,0,0,0
+1510710408674,172813,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,261481,0,16,16,0,0,0
+1510710423818,159282,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-25,text,true,,273581,0,15,15,0,0,0
+1510710418354,173297,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,278589,0,14,14,0,0,0
+1510710423410,173101,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-24,text,true,,263676,0,13,13,0,0,0
+1510710419814,183372,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,270432,0,12,12,0,0,0
+1510710411098,192451,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,274058,0,11,11,0,0,0
+1510710415850,190073,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,261789,0,10,10,0,0,0
+1510710410634,197577,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,261242,0,9,9,0,0,0
+1510710421328,187311,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-21,text,true,,271901,0,8,8,0,0,0
+1510710420718,188225,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,262800,0,7,7,0,0,0
+1510710417314,192455,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,270026,0,6,6,0,0,0
+1510710410042,200860,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,284093,0,5,5,0,0,0
+1510710415226,206729,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,272999,0,4,4,0,0,0
+1510710414960,149672,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,271030,0,22,22,0,0,0
+1510710409024,156421,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,271462,0,21,21,0,0,0
+1510710416253,156659,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,263716,0,20,20,0,0,0
+1510710409644,174473,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,273864,0,19,19,0,0,0
+1510710413132,174691,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,273589,0,18,18,0,0,0
+1510710413408,176815,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,262485,0,17,17,0,0,0
+1510710424052,177500,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-25,text,true,,264692,0,16,16,0,0,0
+1510710417358,185054,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,272279,0,15,15,0,0,0
+1510710412556,190721,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,275105,0,14,14,0,0,0
+1510710422226,189055,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-22,text,true,,273908,0,13,13,0,0,0
+1510710408440,203238,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,271907,0,12,12,0,0,0
+1510710410440,202105,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-4,text,true,,272898,0,11,11,0,0,0
+1510710419168,194592,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,273983,0,10,10,0,0,0
+1510710413845,201712,jp@gc - WebDriver Sampler,500,"{""errorMessage"":""Element is no longer attached to the DOM"",""request"":{""headers"":{""Accept-Encoding"":""gzip,deflate"",""Connection"":""Keep-Alive"",""Content-Length"":""27"",""Content-Type"":""application/json; charset=utf-8"",""Host"":""localhost:29917"",""User-Agent"":""Apache-HttpClient/4.5.2 (Java/1.8.0_151)""},""httpVersion"":""1.1"",""method"":""POST"",""post"":""{\""id\"":\"":wdc:1510710614663\""}"",""url"":""/click"",""urlParsed"":{""anchor"":"""",""query"":"""",""file"":""click"",""directory"":""/"",""path"":""/click"",""relative"":""/click"",""port"":"""",""host"":"""",""password"":"""",""user"":"""",""userInfo"":"""",""authority"":"""",""protocol"":"""",""source"":""/click"",""queryKey"":{},""chunks"":[""click""]},""urlOriginal"":""/session/db397760-c9a6-11e7-a9ac-c3c57bd53abd/element/:wdc:1510710614663/click""}}
+Command duration or timeout: 850 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.52.0', revision: '4c2593cfc3689a7fcd7be52549167e5ccc93ad28', time: '2016-02-11 11:22:43'
+System info: host: 'jmeter-sub4', ip: '10.0.4.24', os.name: 'Linux', os.arch: 'amd64', os.version: '3.16.0-43-generic', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.phantomjs.PhantomJSDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, handlesAlerts=false, databaseEnabled=false, version=2.1.1, platform=LINUX, browserConnectionEnabled=false, proxy={proxyAutoconfigUrl=null, autodetect=false, socksUsername=null, socksPassword=null, httpProxy=null, proxyType=SYSTEM, noProxy=null, ftpProxy=null, socksProxy=null, hCode=673419452, class=org.openqa.selenium.Proxy, sslProxy=null}, nativeEvents=true, acceptSslCerts=false, driverVersion=1.2.0, locationContextEnabled=false, webStorageEnabled=false, browserName=phantomjs, takesScreenshot=true, driverName=ghostdriver, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: db397760-c9a6-11e7-a9ac-c3c57bd53abd",Thread Group 1-10,text,false,,3805,0,9,9,0,0,0
+1510710423456,192168,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-24,text,true,,270202,0,9,9,0,0,0
+1510710415548,200915,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,273170,0,7,7,0,0,0
+1510710422984,194096,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-23,text,true,,261949,0,6,6,0,0,0
+1510710419788,200299,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,273681,0,5,5,0,0,0
+1510710421616,199038,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-21,text,true,,261991,0,4,4,0,0,0
+1510710420732,199961,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,270213,0,4,4,0,0,0
+1510710417992,205040,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,261467,0,2,2,0,0,0
+1510710418581,206759,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,263733,0,1,1,0,0,0
+1510710422808,203717,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-23,text,true,,263429,0,3,3,0,0,0
+1510710412804,215911,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,270608,0,2,2,0,0,0
+1510710422247,211862,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-22,text,true,,270462,0,1,1,0,0,0
+1510710411650,184598,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,264381,0,23,23,0,0,0
+1510710408210,190949,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,271348,0,22,22,0,0,0
+1510710420081,190022,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,265219,0,21,21,0,0,0
+1510710420972,196579,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,271265,0,20,20,0,0,0
+1510710419130,198516,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-18,text,true,,273948,0,20,20,0,0,0
+1510710417882,206976,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,272093,0,18,18,0,0,0
+1510710416042,209149,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,272405,0,17,17,0,0,0
+1510710416634,208588,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,275487,0,17,17,0,0,0
+1510710415462,211353,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,262014,0,15,15,0,0,0
+1510710408638,218317,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,272780,0,14,14,0,0,0
+1510710411230,216425,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,263704,0,13,13,0,0,0
+1510710424046,204369,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-25,text,true,,271139,0,12,12,0,0,0
+1510710412271,217697,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,271884,0,11,11,0,0,0
+1510710413626,221618,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,264582,0,10,10,0,0,0
+1510710409349,203001,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,263561,0,23,23,0,0,0
+1510710408161,206970,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-1,text,true,,265575,0,22,22,0,0,0
+1510710417957,202474,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-17,text,true,,272142,0,21,21,0,0,0
+1510710421709,208941,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-21,text,true,,262193,0,20,20,0,0,0
+1510710411334,219625,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-6,text,true,,264070,0,19,19,0,0,0
+1510710411770,222676,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-7,text,true,,271285,0,18,18,0,0,0
+1510710422403,212316,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-22,text,true,,273919,0,17,17,0,0,0
+1510710421079,213749,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-20,text,true,,271928,0,17,17,0,0,0
+1510710408741,226581,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-2,text,true,,273041,0,15,15,0,0,0
+1510710423467,212903,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-24,text,true,,263233,0,14,14,0,0,0
+1510710416745,222521,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-15,text,true,,261980,0,13,13,0,0,0
+1510710422978,216453,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-23,text,true,,274425,0,12,12,0,0,0
+1510710413461,227387,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,262564,0,11,11,0,0,0
+1510710410742,230990,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,265656,0,10,10,0,0,0
+1510710424064,217989,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-25,text,true,,269703,0,9,9,0,0,0
+1510710419828,222727,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-19,text,true,,271775,0,8,8,0,0,0
+1510710414954,233360,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,273620,0,7,7,0,0,0
+1510710413770,238532,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-10,text,true,,262278,0,6,6,0,0,0
+1510710415573,237020,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-13,text,true,,261354,0,5,5,0,0,0
+1510710412562,240646,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-8,text,true,,269894,0,4,4,0,0,0
+1510710414198,239828,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-11,text,true,,263100,0,3,3,0,0,0
+1510710416481,238296,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-14,text,true,,271624,0,2,2,0,0,0
+1510710417332,240653,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,262744,0,1,1,0,0,0
+1510710423682,214240,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-24,text,true,,273778,0,9,9,0,0,0
+1510710422162,216598,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-22,text,true,,270098,0,8,8,0,0,0
+1510710414654,226169,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-12,text,true,,264100,0,7,7,0,0,0
+1510710413026,228829,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-9,text,true,,261203,0,6,6,0,0,0
+1510710409246,233289,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-3,text,true,,260252,0,5,5,0,0,0
+1510710422854,220656,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-23,text,true,,260650,0,4,4,0,0,0
+1510710410622,236039,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-5,text,true,,265115,0,3,3,0,0,0
+1510710421402,226281,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-21,text,true,,273804,0,2,2,0,0,0
+1510710417566,240879,jp@gc - WebDriver Sampler,200,OK,Thread Group 1-16,text,true,,271946,0,1,1,0,0,0
