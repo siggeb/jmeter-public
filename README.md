@@ -9,7 +9,6 @@ Add fixes so that they are possible to re-use?
 ## Background
 These scripts create an infrastructure for running a distributed performance test with jmeter using Azure resources. It has been run with a total of 656 CPU cores on 40 D5 instances.
 
-
 ## Prerequisites
 
 ### MSDN subscription
@@ -21,6 +20,9 @@ Microsoft.Network
 Microsoft.Storage
 Microsoft.Compute
 
+#### Azure Cli installed
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest
+
 #### Resource limits
 In a previous project we had scenarios that needed 600 CPU cores. Make sure to ask Microsooft to raise this limit with enough timeframe. Test the limits with the validate command below. 
 
@@ -31,20 +33,28 @@ Ask for more cores in the Dv2-series.
 virtual network: es-vnet: 10.0.0.0/16
 subnet: jmeter: 10.0.4.0/24
 
-## Setup infrastructure
-Install Azure CLI
-Login with:
-`az login`
-
+## Setup infrastructure in bash
 Validate template:
 `time az group deployment validate --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
 Deploy from root: 
 `time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
+## If you are a avid windows user and like to work with powershell do this:
+Connect your account:
+Login-AzureRmAccount
 
-### Delete deployment
-`time az group deployment delete --resource-group jmeter --name azuredeploy`
+Select the subscription:
+Select-AzureRmSubscription -SubscriptionName XXX
+
+Test the template:
+Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json (Error if something is wrong otherwise no output)
+
+Deploy the machines based upon the template: (In here you set the machine spec and how many "slave" nodes that will be running the jmx template)
+New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json
+
+### Delete deployment via script
+time az group deployment delete --resource-group jmeter --name azuredeploy
 
 ### Troubleshooting infrastructure
 Installation log:
@@ -55,12 +65,10 @@ Remote hosts list is located in /opt/jmeter/apache-jmeter-3.1/bin/jmeter.propert
 remote_hosts=10.0.4.20,10.0.4.21,10.0.4.22,10.0.4.23,10.0.4.24,10.0.4.25,10.0.4.26,10.0.4.27,10.0.4.28,10.0.4.29
 
 ## Run test:
-ssh to boss-node
+ssh to boss-node (via putty if you are on windows)
 
 Go to /opt/jmeter
 run sudo ./run.sh
-
-
 
 
 $ time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json
@@ -93,3 +101,16 @@ ${__P(Constant_Timer_ms, 30000)}
 ${__P(PhantomJS_Browsing_Users,1000)}
 ${__P(PhantomJS_Ramp_Up_Period_sec,1200)}
 ${__P(PhantomJS_Thread_Loop_Count, 2)}
+
+## Windows quirks
+To be able to add files to the boss node download putty and e.g. WinSCP
+
+- Upload the wanted files (run.sh and JMeter_PhantomJS_Template.jmx from local testpack folder) via WinSCP to the home/lyko folder on the boss node
+- Via putty go to the folder opt/jmeter and run the following to copy files from home/lyko : sudo cp /home/lyko/* .
+- Make the run.sh executable by sudo chmod +x run.sh 
+- If needed also run sudo dos2unix run.sh to fix windows to unix line endings (install via sudo apt-get install dos2unix)
+- Run the wanted amount of users (configured in JMeter_PhantomJS_Template.jmx) on the configured machines via sudo ./run.sh
+- Monitor the machines
+
+## Problems installing Jmeter
+Sometimes jmeter is not installed on the subnodes which makes the deployment fail. You cannot run the load test either then as the subnodes are not all capable of running the jmeter template. A workaround for this is to find which subnodes that are not installed correctly and remove their ip-adresses from the remote_hosts list in the file /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties

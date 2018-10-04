@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="Auth_Code" elementType="Argument">
+            <stringProp name="Argument.name">Auth_Code</stringProp>
+            <stringProp name="Argument.value">${__P(Auth_Code,/en?auth_code=1952)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Checkout" elementType="Argument">
+            <stringProp name="Argument.name">Checkout</stringProp>
+            <stringProp name="Argument.value">${__P(Checkout, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Constant_Timer_ms" elementType="Argument">
+            <stringProp name="Argument.name">Constant_Timer_ms</stringProp>
+            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 1000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,50)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Ramp_Up_Period_sec</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,50)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Thread_Loop_Count</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="    " elementType="Argument">
+            <stringProp name="Argument.name">    </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Product_Page, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Press_Xpath" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Press_Xpath</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Press_Xpath, Add Xpath here)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="    " elementType="Argument">
+            <stringProp name="Argument.name">    </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PhantomJS_Driver" elementType="Argument">
+            <stringProp name="Argument.name">PhantomJS_Driver</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Driver,/usr/local/bin/phantomjs)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Enviroment" elementType="Argument">
+            <stringProp name="Argument.name">Enviroment</stringProp>
+            <stringProp name="Argument.value">${__P(Enviroment,https://www.lyko.se)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${PhantomJS_Thread_Loop_Count}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${PhantomJS_Browsing_Users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${PhantomJS_Ramp_Up_Period_sec}</stringProp>
+        <longProp name="ThreadGroup.start_time">1510653546000</longProp>
+        <longProp name="ThreadGroup.end_time">1510653546000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler" enabled="true">
+          <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium, org.openqa.selenium.support.ui)//WebDriver classes
+var wait = new pkg.WebDriverWait(WDS.browser, 5000);
+WDS.browser.manage().window().setSize(new pkg.Dimension(1400,2200));
+WDS.sampleResult.sampleStart();
+
+// Start page
+WDS.browser.get(&apos;${Enviroment}&apos;);
+
+
+java.lang.Thread.sleep(20000); 
+var modalButton = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.className(&apos;close&apos;)));
+modalButton.click(); 
+
+var addToCartButton = WDS.browser.findElement(pkg.By.className(&apos;add-to-cart&apos;));
+addToCartButton.click();
+java.lang.Thread.sleep(2000); 
+
+// Category page
+WDS.browser.get(&apos;${Enviroment}/harvard/accessoarer&apos;);
+
+var addToCartButton = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.className(&apos;add-to-cart&apos;)));
+addToCartButton.click();
+java.lang.Thread.sleep(2000);
+
+//Product page
+WDS.browser.get(&apos;${Enviroment}/lanza/lanza-healing-strength-silk-serum&apos;);
+java.lang.Thread.sleep(2000);
+var AddToCart = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.className(&apos;add-to-cart&apos;)));
+AddToCart.click();
+java.lang.Thread.sleep(2000); 
+
+WDS.browser.get(&apos;${Enviroment}/harvard/styling&apos;);
+java.lang.Thread.sleep(3000);
+
+//Kassan
+WDS.browser.get(&apos;${Enviroment}/kassa&apos;);
+var AddToCart = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.className(&apos;add-to-cart&apos;)));
+AddToCart.click();
+java.lang.Thread.sleep(2000);
+
+
+// Address Fields
+var Email = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&quot;email&quot;))); 
+Email.sendKeys(&quot;andreas.olofsson92@gmail.com&quot;);
+
+var Email = WDS.browser.findElement(pkg.By.name(&quot;personal-number&quot;)); 
+Email.sendKeys(&quot;921312321&quot;);
+
+// Payment methods
+var paymentMethods = WDS.browser.findElements(pkg.By.className(&apos;select-payment-method&apos;));
+
+for (i = 0; i &lt; paymentMethods.length; i++) {
+    if(i === 1) {
+     paymentMethods[1].click();
+    }
+}
+
+java.lang.Thread.sleep(2000);
+var shippingMethods = WDS.browser.findElements(pkg.By.className(&apos;select-shipping-method&apos;));
+
+for (i = 0; i &lt; shippingMethods.length; i++) {
+    if(i === 1) {
+     shippingMethods[1].click();
+    }
+}
+java.lang.Thread.sleep(2000);
+
+var editAddressButton =  WDS.browser.findElement(pkg.By.id(&apos;edit-address&apos;))
+editAddressButton.click();
+
+java.lang.Thread.sleep(2000);
+var FirstName = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.name(&quot;fname&quot;)));
+FirstName.sendKeys(&quot;Testperson&quot;);
+
+var LastName = WDS.browser.findElement(pkg.By.name(&apos;lname&apos;)); 
+LastName.sendKeys(&quot;Testaren&quot;);
+
+var adress = WDS.browser.findElement(pkg.By.name(&apos;address&apos;)); 
+adress.sendKeys(&quot;Grisslevägen 11&quot;);
+
+var PostalCode = WDS.browser.findElement(pkg.By.name(&quot;zip&quot;)); 
+PostalCode.sendKeys(&quot;227 32&quot;);
+
+java.lang.Thread.sleep(2000);
+var city = WDS.browser.findElement(pkg.By.name(&quot;city&quot;)); 
+city.sendKeys(&quot;Lund&quot;);  
+
+var search = WDS.browser.findElement(pkg.By.name(&apos;q&apos;)); 
+search.sendKeys(&quot;1027-120-0250&quot;);
+var AddToCart = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.className(&apos;add-to-cart&apos;)));
+AddToCart.click(); 
+java.lang.Thread.sleep(4000);
+
+WDS.browser.get(&apos;${Enviroment}/kampanjer&apos;);
+java.lang.Thread.sleep(4000);
+
+WDS.browser.get(&apos;${Enviroment}/kassa&apos;);
+var AddToCart = wait.until(pkg.ExpectedConditions.presenceOfElementLocated(pkg.By.className(&apos;add-quantity&apos;)));
+AddToCart.click();
+
+// Add quantity
+var addQuantityButtons = WDS.browser.findElements(pkg.By.className(&apos;add-quantity&apos;));
+
+for (i = 0; i &lt; addQuantityButtons.length; i++) {
+    var random_boolean = Math.random() &gt;= 0.5;
+    if(random_boolean) {
+        addQuantityButtons[i].click();
+         java.lang.Thread.sleep(1500);
+        if(i &lt;= 1) {  
+           addQuantityButtons[i].click();
+           java.lang.Thread.sleep(1500);
+        }
+    }
+}
+
+// Remove quantity
+var removeQuantityButtons = WDS.browser.findElements(pkg.By.className(&apos;remove-quantity&apos;));
+
+for (i = 0; i &lt; removeQuantityButtons.length; i++) {
+    var random_boolean = Math.random() &gt;= 0.5;
+    if(random_boolean) {
+        removeQuantityButtons[i].click();
+        java.lang.Thread.sleep(1000);
+    }
+}
+
+java.lang.Thread.sleep(5000);
+WDS.sampleResult.sampleEnd();</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">javascript</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig guiclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfigGui" testclass="com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig" testname="bzm - PhantomJS Driver Config" enabled="true">
+          <stringProp name="WebDriverConfig.proxy_type">SYSTEM</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_path">${PhantomJS_Driver}</stringProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_cli_args"></stringProp>
+          <stringProp name="PhantomJSDriverConfig.phantomjs_ghostdriver_cli_args"></stringProp>
+        </com.blazemeter.jmeter.webdriver.phantomjs.PhantomJSDriverConfig>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
