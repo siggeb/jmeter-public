@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ChromeDriver" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="Login_Code_Stage" elementType="Argument">
+            <stringProp name="Argument.name">Login_Code_Stage</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Code_Stage, 1975)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Login_Input" elementType="Argument">
+            <stringProp name="Argument.name">Login_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Input,html/body/form/input)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="                                                                                                    " elementType="Argument">
+            <stringProp name="Argument.name">                                                                                                    </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Home_Page" elementType="Argument">
+            <stringProp name="Argument.name">Home_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page, https://preproduction.polarnopyret.se/?auth_code=1975)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="My_Pages" elementType="Argument">
+            <stringProp name="Argument.name">My_Pages</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Password, https://preproduction.polarnopyret.se/mina-sidor)} </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Category_Page" elementType="Argument">
+            <stringProp name="Argument.name">Category_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Category_Page, https://preproduction.polarnopyret.se/barnklader/ytterklader/jackor?p_age_group=26)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page, https://preproduction.polarnopyret.se/barnklader/ytterklader/jackor/tunn-skaljacka-rosa-60364314-631)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Second_Category_Page" elementType="Argument">
+            <stringProp name="Argument.name">Second_Category_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Category_Page, https://preproduction.polarnopyret.se/barnklader/underdelar/byxor--jumpsuits?p_age_group=612)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Second_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Second_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Page, https://preproduction.polarnopyret.se/barnklader/underdelar/byxor--jumpsuits/jeans-slim-svart-60346770-198)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Checkout" elementType="Argument">
+            <stringProp name="Argument.name">Checkout</stringProp>
+            <stringProp name="Argument.value">${__P(Checkout, https://preproduction.polarnopyret.se/kassan)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Store_Page" elementType="Argument">
+            <stringProp name="Argument.name">Store_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Store_Page, https://preproduction.polarnopyret.se/butiker)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Search_Page" elementType="Argument">
+            <stringProp name="Argument.name">Search_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Search_Page, https://preproduction.polarnopyret.se/sok?q=jacka)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="   " elementType="Argument">
+            <stringProp name="Argument.name">   </stringProp>
+            <stringProp name="Argument.value">   </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Constant_Timer_ms" elementType="Argument">
+            <stringProp name="Argument.name">Constant_Timer_ms</stringProp>
+            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 1000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ChromeDriver_Browsing_Users" elementType="Argument">
+            <stringProp name="Argument.name">ChromeDriver_Browsing_Users</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriver_Browsing_Users,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ChromeDriver_Ramp_Up_Period_sec" elementType="Argument">
+            <stringProp name="Argument.name">ChromeDriver_Ramp_Up_Period_sec</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriver_Ramp_Up_Period_sec,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ChromeDriver_Thread_Loop_Count" elementType="Argument">
+            <stringProp name="Argument.name">ChromeDriver_Thread_Loop_Count</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriver_Thread_Loop_Count, 2)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="                          " elementType="Argument">
+            <stringProp name="Argument.name">                          </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Product_Page" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Product_Page</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Product_Page, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Add_To_Cart_Press_Xpath" elementType="Argument">
+            <stringProp name="Argument.name">Add_To_Cart_Press_Xpath</stringProp>
+            <stringProp name="Argument.value">${__P(Add_To_Cart_Press_Xpath, Add Xpatch here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="                       " elementType="Argument">
+            <stringProp name="Argument.name">                       </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Cookie_Value" elementType="Argument">
+            <stringProp name="Argument.name">Cookie_Value</stringProp>
+            <stringProp name="Argument.value">${__P(Cookie_Value, Add Value here)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Cookie_Name" elementType="Argument">
+            <stringProp name="Argument.name">Cookie_Name</stringProp>
+            <stringProp name="Argument.value">${__P(Cookie_Name, Add Name Value here)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="                    " elementType="Argument">
+            <stringProp name="Argument.name">                    </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Gmail_Adress" elementType="Argument">
+            <stringProp name="Argument.name">Gmail_Adress</stringProp>
+            <stringProp name="Argument.value">${__P(Gmail_Adress, Add Http(s) here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Gmail_Input" elementType="Argument">
+            <stringProp name="Argument.name">Gmail_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Gmail_Input, Add Gmal Adress here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Gmail_Password" elementType="Argument">
+            <stringProp name="Argument.name">Gmail_Password</stringProp>
+            <stringProp name="Argument.value">${__P(Gmail_Password,  Add Password here )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="                   " elementType="Argument">
+            <stringProp name="Argument.name">                   </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="First_Name_Input" elementType="Argument">
+            <stringProp name="Argument.name">First_Name_Input</stringProp>
+            <stringProp name="Argument.value">${__P(First_Name_Input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Last_Name_Input" elementType="Argument">
+            <stringProp name="Argument.name">Last_Name_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Last_Name_Input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Address1_Input" elementType="Argument">
+            <stringProp name="Argument.name">Address1_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Address1_Input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Postal_Code_Input" elementType="Argument">
+            <stringProp name="Argument.name">Postal_Code_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Postal_Code_Input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="City_Input" elementType="Argument">
+            <stringProp name="Argument.name">City_Input</stringProp>
+            <stringProp name="Argument.value">${__P(City_Input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Email_input" elementType="Argument">
+            <stringProp name="Argument.name">Email_input</stringProp>
+            <stringProp name="Argument.value">${__P(Email_input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Phone_Number_Input" elementType="Argument">
+            <stringProp name="Argument.name">Phone_Number_Input</stringProp>
+            <stringProp name="Argument.value">${__P(Phone_Number_Input, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="             " elementType="Argument">
+            <stringProp name="Argument.name">             </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Credit_Card_Number" elementType="Argument">
+            <stringProp name="Argument.name">Credit_Card_Number</stringProp>
+            <stringProp name="Argument.value">${__P(Credit_Card_Number, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Expiry_Date_Month" elementType="Argument">
+            <stringProp name="Argument.name">Expiry_Date_Month</stringProp>
+            <stringProp name="Argument.value">${__P(Expiry_Date_Month, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Expiry_Date_Year" elementType="Argument">
+            <stringProp name="Argument.name">Expiry_Date_Year</stringProp>
+            <stringProp name="Argument.value">${__P(Expiry_Date_Year, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Security_Code" elementType="Argument">
+            <stringProp name="Argument.name">Security_Code</stringProp>
+            <stringProp name="Argument.value">${__P(Security_Code, Add Input here  )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="      " elementType="Argument">
+            <stringProp name="Argument.name">      </stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Chrome_Driver" elementType="Argument">
+            <stringProp name="Argument.name">Chrome_Driver</stringProp>
+            <stringProp name="Argument.value">${__P(Chrome_Driver, /usr/local/bin/chromedriver )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ChromeDriverConfig.headless_enabled" elementType="Argument">
+            <stringProp name="Argument.name">ChromeDriverConfig.headless_enabled</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriverConfig.headless_enabled, false )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TestResultsXmlPath" elementType="Argument">
+            <stringProp name="Argument.name">TestResultsXmlPath</stringProp>
+            <stringProp name="Argument.value">${__P(TestResultsXmlPath, /Users/sigbir/dev/rnb/Sources/Avensia.SystemTests/long-running-performance-tests/TestResults.xml)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="server_environment" elementType="Argument">
+            <stringProp name="Argument.name">server_environment</stringProp>
+            <stringProp name="Argument.value">${__P(server_environment, https://stage.lyko.se )}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Login_Email" elementType="Argument">
+            <stringProp name="Argument.name">Login_Email</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Email, sigurdur.birgisson@avensia.com)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Login_Password" elementType="Argument">
+            <stringProp name="Argument.name">Login_Password</stringProp>
+            <stringProp name="Argument.value">${__P(Login_Password, sigge123)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="ChromeDriver" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${ChromeDriver_Thread_Loop_Count}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${ChromeDriver_Browsing_Users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${ChromeDriver_Ramp_Up_Period_sec}</stringProp>
+        <longProp name="ThreadGroup.start_time">1481632370000</longProp>
+        <longProp name="ThreadGroup.end_time">1481632370000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig guiclass="com.googlecode.jmeter.plugins.webdriver.config.gui.ChromeDriverConfigGui" testclass="com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig" testname="jp@gc - Chrome Driver Config" enabled="true">
+          <stringProp name="WebDriverConfig.proxy_type">AUTO_DETECT</stringProp>
+          <stringProp name="WebDriverConfig.proxy_pac_url"></stringProp>
+          <stringProp name="WebDriverConfig.http_host"></stringProp>
+          <intProp name="WebDriverConfig.http_port">8080</intProp>
+          <boolProp name="WebDriverConfig.use_http_for_all_protocols">true</boolProp>
+          <stringProp name="WebDriverConfig.https_host"></stringProp>
+          <intProp name="WebDriverConfig.https_port">8080</intProp>
+          <stringProp name="WebDriverConfig.ftp_host"></stringProp>
+          <intProp name="WebDriverConfig.ftp_port">8080</intProp>
+          <stringProp name="WebDriverConfig.socks_host"></stringProp>
+          <intProp name="WebDriverConfig.socks_port">8080</intProp>
+          <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
+          <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">true</boolProp>
+          <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
+          <stringProp name="ChromeDriverConfig.chromedriver_path">${Chrome_Driver}</stringProp>
+          <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+        </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Start page" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Start page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions = org.openqa.selenium.support.ui.ExpectedConditions
+var wait=new support_ui.WebDriverWait(WDS.browser, 10)
+var exception = null
+
+
+WDS.sampleResult.sampleStart(); //captures sampler&apos;s start time
+WDS.sampleResult.getLatency();
+WDS.log.info(&quot;Sample started&quot;);
+
+WDS.browser.get(&apos;${Home_Page}&apos;) //opens website specified in ${Home_Page}
+WDS.log.info(&quot;Sample ended - navigated to ${Home_Page}&quot;);
+
+WDS.sampleResult.sampleEnd(); 
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Start page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Non-200 response!</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">1</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Log in" enabled="false"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Log in" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.browser.get(&apos;${Home_Page}&apos;);
+wait.until(conditions.presenceOfElementLocated(pkg.By.id(&quot;main-menu-button&quot;)));
+WDS.browser.get(&apos;${My_Pages}&apos;);
+wait.until(conditions.presenceOfElementLocated(pkg.By.name(&quot;username&quot;)));
+
+var LoginEmail = WDS.browser.findElement(pkg.By.name(&quot;username&quot;));
+WDS.log.info(&quot;email found&quot;);
+LoginEmail.sendKeys(&quot;${Login_Email}&quot;);
+WDS.log.info(&quot;email written&quot;);
+
+var LoginPassword = WDS.browser.findElement(pkg.By.name(&quot;password&quot;));
+WDS.log.info(&quot;password found&quot;);
+LoginPassword.sendKeys(&quot;${Login_Password}&quot;);
+WDS.log.info(&quot;password written&quot;);
+
+WDS.log.info(&quot;Email and password is typed&quot;);
+
+wait.until(conditions.presenceOfElementLocated(pkg.By.xpath(&quot;//span[text()=&apos;Logga in&apos;]&quot;)));
+var LoginSubmit = WDS.browser.findElement(pkg.By.xpath(&quot;//span[text()=&apos;Logga in&apos;]&quot;));
+WDS.log.info(&quot;span found&quot;);
+
+WDS.sampleResult.sampleStart();
+
+LoginSubmit.click(); 
+WDS.log.info(&quot;Clicked login submit button&quot;);
+wait.until(conditions.visibilityOfElementLocated(pkg.By.linkText(&quot;Logga ut&quot;)));
+WDS.log.info(&quot;logga ut visible&quot;);
+WDS.sampleResult.sampleEnd();
+
+WDS.log.info(&quot;sample end&quot;);
+var Logout = WDS.browser.findElement(pkg.By.linkText(&quot;Logga ut&quot;));
+Logout.click();
+wait.until(conditions.presenceOfElementLocated(pkg.By.xpath(&quot;//p[text()=&apos;Det här är den svenska sidan, då.&apos;]&quot;)));
+
+
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Log in" enabled="true">
+              <stringProp name="TestPlan.comments">Test appshell/data times</stringProp>
+            </Summariser>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">1</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="User Flow" enabled="true"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;${Product_Page}&apos;);
+WDS.sampleResult.sampleEnd();
+
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">1</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Add-to-cart" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.browser.get(&apos;${Product_Page}&apos;);
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Lägg i varukorgen&apos;)]]&quot;)));
+var AddToCart = WDS.browser.findElement(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Lägg i varukorgen&apos;)]]&quot;)); 
+
+WDS.sampleResult.sampleStart();
+
+AddToCart.click(); 
+WDS.log.info(&quot;Clicked the köp button&quot;);
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Du är kanske också intresserad av&apos;)]]&quot;)));
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Add to cart" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">1</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Category page" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.sampleResult.sampleStart();
+WDS.log.info(&quot;Navigating to ${Category_Page}&quot;);
+WDS.browser.get(&apos;${Category_Page}&apos;);
+wait.until(conditions.visibilityOfElementLocated(pkg.By.xpath(&quot;//*[contains(text(),&apos;Tunn skaljacka rosa&apos;)]&quot;)));
+WDS.sampleResult.sampleEnd();
+WDS.log.info(&quot;Sample ended - navigated to ${Category_Page}&quot;);</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Category Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Non-200 response!</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Find stores" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.sampleResult.sampleStart();
+WDS.log.info(&quot;Navigating to ${Store_Page}&quot;);
+WDS.browser.get(&apos;${Store_Page}&apos;);
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;PO.P butiker&apos;)]]&quot;)));
+WDS.sampleResult.sampleEnd();
+WDS.log.info(&quot;Sample ended - navigated to ${Store_Page}&quot;);</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Store Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Non-200 response!</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Search product" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.sampleResult.sampleStart();
+WDS.log.info(&quot;Navigating to ${Search_Page}&quot;);
+WDS.browser.get(&apos;${Search_Page}&apos;);
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Sökresultat för&apos;)]]&quot;)));
+
+WDS.sampleResult.sampleEnd();
+WDS.log.info(&quot;Sample ended - navigated to ${Search_Page}&quot;);</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Search product" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Non-200 response!</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Email - for verifying order confirmation email" enabled="false"/>
+        <hashTree>
+          <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Email" enabled="true">
+            <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
+var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.browser.get(&quot;${Gmail_Adress}&quot;);
+
+wait.until(conditions.elementToBeClickable(pkg.By.id(&quot;identifierId&quot;)));
+var IdentiFierId = WDS.browser.findElement(pkg.By.id(&quot;identifierId&quot;));
+IdentiFierId.sendKeys(&quot;${Gmail_Input}&quot;);
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;.//*[@id=&apos;identifierNext&apos;]/content/span&quot;)));
+var Next = WDS.browser.findElement(pkg.By.xpath(&quot;.//*[@id=&apos;identifierNext&apos;]/content/span&quot;));
+Next.click();
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;.//*[@id=&apos;password&apos;]/div[1]/div/div[1]/input&quot;)));
+var Password = WDS.browser.findElement(pkg.By.xpath(&quot;.//*[@id=&apos;password&apos;]/div[1]/div/div[1]/input&quot;));
+Password.sendKeys(&apos;${Gmail_Password}&apos;);
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;.//*[@id=&apos;passwordNext&apos;]/content/span&quot;)));
+var PasswordNext = WDS.browser.findElement(pkg.By.xpath(&quot;.//*[@id=&apos;passwordNext&apos;]/content/span&quot;));
+PasswordNext.click();
+
+java.lang.Thread.sleep(20000)
+
+WDS.sampleResult.sampleEnd();</stringProp>
+            <stringProp name="WebDriverSampler.parameters"></stringProp>
+            <stringProp name="WebDriverSampler.language">javascript</stringProp>
+          </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+          <hashTree>
+            <Summariser guiclass="SummariserGui" testclass="Summariser" testname="Product Page" enabled="true"/>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">${Constant_Timer_ms}</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Server http calls" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${http_Thread_Loop_Count}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${http_Browsing_Users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${http_Ramp_Up_Period_sec}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Appshell data" enabled="true"/>
+        <hashTree>
+          <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="auth_code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">1952</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">auth_code</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path"></stringProp>
+            <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </ConfigTestElement>
+          <hashTree/>
+          <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+            <collectionProp name="CookieManager.cookies">
+              <elementProp name="auth" elementType="Cookie" testname="auth">
+                <stringProp name="Cookie.value">1952</stringProp>
+                <stringProp name="Cookie.domain"></stringProp>
+                <stringProp name="Cookie.path"></stringProp>
+                <boolProp name="Cookie.secure">false</boolProp>
+                <longProp name="Cookie.expires">0</longProp>
+                <boolProp name="Cookie.path_specified">true</boolProp>
+                <boolProp name="Cookie.domain_specified">true</boolProp>
+              </elementProp>
+            </collectionProp>
+            <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          </CookieManager>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="auth_code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">1952</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">auth_code</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">https://stage.lyko.se/appshell/data?scope</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>true</encoding>
+            <assertions>false</assertions>
+            <subresults>false</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <fileName>true</fileName>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+            <sampleCount>true</sampleCount>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
