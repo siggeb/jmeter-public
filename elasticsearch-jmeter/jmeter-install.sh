@@ -188,7 +188,7 @@ install_chromedriver()
 {
     log "Installing chromedriver"
     apt-get -y update  > /dev/null
-    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip node npm #> /dev/null
+    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip npm #> /dev/null
 	npm install -g chromedriver #> /dev/null
 }
 
