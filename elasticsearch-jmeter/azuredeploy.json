@@ -127,7 +127,7 @@
           "autoUpgradeMinorVersion": true,
           "settings": {
             "fileUris": "[variables('setupScripts')]",
-            "commandToExecute": "[concat('bash jmeter-install.sh -mr ', variables('subNodesIpPrefix'), '-', parameters('subNodeCount'), ' -j ', ' -t ', parameters('testpack'))]"
+            "commandToExecute": "[concat('bash jmeter-install.sh -mr ', variables('subNodesIpPrefix'), '-', parameters('subNodeCount'), ' -t ', parameters('testpack'))]"
           }
         },
         "sub": {
