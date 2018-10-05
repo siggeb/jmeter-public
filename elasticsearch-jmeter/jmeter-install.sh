@@ -123,13 +123,15 @@ EOF
 update_config_sub()
 {
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
-    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4441|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4440|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4441|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4440|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" | sed "s|#server.rmi.ssl.truststore.type=JKS|server.rmi.ssl.truststore.type=JKS|" | sed "s|#server.rmi.ssl.truststore.file=rmi_keystore.jks|server.rmi.ssl.truststore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.truststore.password=changeit|server.rmi.ssl.truststore.password=changeit|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 }
 
 update_config_boss()
 {
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
-    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" | sed "s|#server.rmi.ssl.truststore.type=JKS|server.rmi.ssl.truststore.type=JKS|" | sed "s|#server.rmi.ssl.truststore.file=rmi_keystore.jks|server.rmi.ssl.truststore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.truststore.password=changeit|server.rmi.ssl.truststore.password=changeit|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    ./opt/jmeter/apache-jmeter-4.0/bin/create-rmi-keystore.sh
+    mv rmi_keystore.jks /opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks
 }
 
 install_jmeter()
@@ -153,7 +155,8 @@ install_jmeter()
      
     chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter-server
     chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter
-
+    chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/create-rmi-keystore.sh
+    
     
     if [ ${IS_MASTER} -ne 1 ]; 
     then
