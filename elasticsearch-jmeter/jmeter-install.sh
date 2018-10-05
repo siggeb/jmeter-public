@@ -112,7 +112,7 @@ install_jmeter_service()
 
     start on starting
     script
-        JVM_ARGS="-Xms1024m -Xmx6144m -XX:NewSize=512m -XX:MaxNewSize=6144m" && export JVM_ARGS && /opt/jmeter/apache-jmeter-3.1/bin/jmeter-server
+        JVM_ARGS="-Xms1024m -Xmx6144m -XX:NewSize=512m -XX:MaxNewSize=6144m" && export JVM_ARGS && /opt/jmeter/apache-jmeter-4.0/bin/jmeter-server
     end script
 EOF
 
@@ -122,14 +122,14 @@ EOF
 
 update_config_sub()
 {
-    mv /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties.bak
-    cat /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4441|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4440|" > /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties 
+    mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4441|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4440|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 }
 
 update_config_boss()
 {
-    mv /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties.bak
-    cat /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" > /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties 
+    mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 }
 
 install_jmeter()
@@ -138,7 +138,7 @@ install_jmeter()
     apt-get -y install unzip 
     
     mkdir -p /opt/jmeter
-    wget -O jmeter.zip https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-3.1.zip
+    wget -O jmeter.zip https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-4.0.zip
     wget -O JMeterPlugins-Standard-1.4.0.zip http://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.4.0.zip
 	wget -O JMeterPlugins-WebDriver-1.4.0.zip http://jmeter-plugins.org/downloads/file/JMeterPlugins-WebDriver-1.4.0.zip
 	wget -O JMeterPlugins-ExtrasLibs-1.4.0.zip https://jmeter-plugins.org/downloads/file/JMeterPlugins-ExtrasLibs-1.4.0.zip
@@ -147,12 +147,12 @@ install_jmeter()
     unzip -q jmeter.zip -d /opt/jmeter/
     
     log "unzipping plugins"
-    unzip -q JMeterPlugins-Standard-1.4.0.zip -d /opt/jmeter/apache-jmeter-3.1/
-	unzip -q JMeterPlugins-WebDriver-1.4.0.zip -d /opt/jmeter/apache-jmeter-3.1/
-	unzip -q JMeterPlugins-ExtrasLibs-1.4.0.zip -d /opt/jmeter/apache-jmeter-3.1/
+    unzip -q JMeterPlugins-Standard-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
+	unzip -q JMeterPlugins-WebDriver-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
+	unzip -q JMeterPlugins-ExtrasLibs-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
      
-    chmod u+x /opt/jmeter/apache-jmeter-3.1/bin/jmeter-server
-    chmod u+x /opt/jmeter/apache-jmeter-3.1/bin/jmeter
+    chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter-server
+    chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter
 
     
     if [ ${IS_MASTER} -ne 1 ]; 
@@ -184,12 +184,12 @@ install_jmeter()
     useradd -u 999 -g 999 jmeter
     chown -R jmeter: /opt/jmeter
 }
-install_phantomjs()
+install_chromedriver()
 {
-    log "Installing phantomjs"
+    log "Installing chromedriver"
     apt-get -y update  > /dev/null
     apt-get -qy install wget default-jre-headless telnet iputils-ping unzip nodejs-legacy npm  > /dev/null
-	npm install -g phantomjs > /dev/null
+	npm install -g chromedriver > /dev/null
 }
 
 
@@ -201,7 +201,7 @@ then
 fi
 
 install_java
-install_phantomjs
+install_chromedriver
 install_jmeter
 
 log "script complete"
