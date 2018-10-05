@@ -61,6 +61,8 @@ Installation log:
 `sudo -i`
 `cat /var/lib/waagent/custom-script/download/stdout`
 
+`cat /var/lib/waagent/custom-script/download/0/stdout`
+
 Remote hosts list is located in /opt/jmeter/apache-jmeter-3.1/bin/jmeter.properties
 remote_hosts=10.0.4.20,10.0.4.21,10.0.4.22,10.0.4.23,10.0.4.24,10.0.4.25,10.0.4.26,10.0.4.27,10.0.4.28,10.0.4.29
 
