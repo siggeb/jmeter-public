@@ -115,8 +115,8 @@
       "imageReference": {
         "publisher": "Canonical",
         "offer": "UbuntuServer",
-        "sku": "18.04-LTS",
-        "version": "18.04.201810030"
+        "sku": "14.04.2-LTS",
+        "version": "latest"
       },
       "managementPort": "22",
       "extensionSettings": {
