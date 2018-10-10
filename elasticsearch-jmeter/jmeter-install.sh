@@ -196,11 +196,17 @@ install_chromedriver()
     log "Installing chromedriver"
     apt-get -y update  > /dev/null
     apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 #> /dev/null
-    npm install -g n
-    npm config set strict-ssl false
-    n stable
-    npm install -g chromedriver #> /dev/null
-    ln -s /home/avensia/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin
+    #log "Installing n"
+    #npm install -g n
+    #npm config set strict-ssl false
+    #n stable
+    #log "Done installing n"
+    log "Installing chromedriver"
+    apt-get install chromium-chromedriver
+    sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+    #npm install -g chromedriver #> /dev/null
+    #ln -s /home/avensia/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin
+    log "Chromedriver installed and alias created in /usr/bin"
 }
 
 
