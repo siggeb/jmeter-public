@@ -1,4 +1,6 @@
 ## TODO
+Upgrade Ubuntu 14.04 image to be 18.04. 
+- jmeter-server service on both slaves and boss need to be upgraded from Upstart to Systemd. See this for details: https://wiki.ubuntu.com/SystemdForUpstartUsers
 Fix ssh credentials to be a sustainable solution without a PW in repo (generate keys? does it work for slaves?)
 Cleanup unneccesary parameters in run script
 run.properties adapted

@@ -195,8 +195,12 @@ install_chromedriver()
 {
     log "Installing chromedriver"
     apt-get -y update  > /dev/null
-    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip npm libnss3 #> /dev/null
-	npm install -g chromedriver #> /dev/null
+    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 #> /dev/null
+    npm install -g n
+    npm config set strict-ssl false
+    n stable
+    npm install -g chromedriver #> /dev/null
+    ln -s /home/avensia/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin
 }
 
 
