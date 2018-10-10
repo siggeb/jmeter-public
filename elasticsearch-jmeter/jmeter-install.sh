@@ -202,7 +202,7 @@ install_chromedriver()
     #n stable
     #log "Done installing n"
     log "Installing chromedriver"
-    apt-get install chromium-chromedriver
+    apt-get -qy install chromium-chromedriver
     sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
     #npm install -g chromedriver #> /dev/null
     #ln -s /home/avensia/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin
