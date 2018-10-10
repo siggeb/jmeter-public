@@ -79,7 +79,7 @@
           </elementProp>
           <elementProp name="ChromeDriver_Browsing_Users" elementType="Argument">
             <stringProp name="Argument.name">ChromeDriver_Browsing_Users</stringProp>
-            <stringProp name="Argument.value">${__P(ChromeDriver_Browsing_Users,5)}</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriver_Browsing_Users,2)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ChromeDriver_Ramp_Up_Period_sec" elementType="Argument">
@@ -89,7 +89,7 @@
           </elementProp>
           <elementProp name="ChromeDriver_Thread_Loop_Count" elementType="Argument">
             <stringProp name="Argument.name">ChromeDriver_Thread_Loop_Count</stringProp>
-            <stringProp name="Argument.value">${__P(ChromeDriver_Thread_Loop_Count, 2)}</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriver_Thread_Loop_Count, 3)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="                          " elementType="Argument">
@@ -286,7 +286,7 @@
           <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
           <stringProp name="ChromeDriverConfig.chromedriver_path">${Chrome_Driver}</stringProp>
           <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
-          <boolProp name="ChromeDriverConfig.headless_enabled">false</boolProp>
+          <boolProp name="ChromeDriverConfig.headless_enabled">true</boolProp>
         </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
         <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Start page" enabled="true"/>
@@ -439,19 +439,24 @@ var conditions =org.openqa.selenium.support.ui.ExpectedConditions
 var wait = new support_ui.WebDriverWait(WDS.browser, 90)
 
 WDS.browser.get(&apos;${Product_Page}&apos;);
+WDS.browser.manage().window().setSize(new pkg.Dimension(1280, 1024));
 
 wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Lägg i varukorgen&apos;)]]&quot;)));
 var AddToCart = WDS.browser.findElement(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Lägg i varukorgen&apos;)]]&quot;)); 
 
 WDS.sampleResult.sampleStart();
 
-AddToCart.click(); 
+//AddToCart.click(); 
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, AddToCart) 
 WDS.log.info(&quot;Clicked the köp button&quot;);
 
 wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Du är kanske också intresserad av&apos;)]]&quot;)));
 
 WDS.sampleResult.sampleEnd();
-</stringProp>
+
+
+//var btnView = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;ProductPage&quot;]/div/div[2]/div[2]/div[2]/div[2]/button&apos;))
+//WDS.browser.executeScript(&quot;arguments[0].click();&quot;, btnView) </stringProp>
             <stringProp name="WebDriverSampler.parameters"></stringProp>
             <stringProp name="WebDriverSampler.language">javascript</stringProp>
           </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
