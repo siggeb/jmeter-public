@@ -202,16 +202,20 @@ install_jmeter()
 install_chromedriver()
 {
     log "Installing chromedriver"
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+    
     apt-get -y update  > /dev/null
-    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 #> /dev/null
+    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 google-chrome-stable chromium-chromedriver #> /dev/null
+    sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+    
     #log "Installing n"
     #npm install -g n
     #npm config set strict-ssl false
     #n stable
     #log "Done installing n"
-    log "Installing chromedriver"
-    apt-get -qy install chromium-chromedriver
-    sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+
+    
     #npm install -g chromedriver #> /dev/null
     #ln -s /home/avensia/node_modules/chromedriver/lib/chromedriver/chromedriver /usr/bin
     log "Chromedriver installed and alias created in /usr/bin"
