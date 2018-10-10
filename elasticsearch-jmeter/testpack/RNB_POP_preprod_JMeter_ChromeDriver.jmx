@@ -214,7 +214,7 @@
           </elementProp>
           <elementProp name="Chrome_Driver" elementType="Argument">
             <stringProp name="Argument.name">Chrome_Driver</stringProp>
-            <stringProp name="Argument.value">${__P(Chrome_Driver, /usr/local/bin/chromedriver )}</stringProp>
+            <stringProp name="Argument.value">${__P(Chrome_Driver, /usr/bin/chromedriver )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="ChromeDriverConfig.headless_enabled" elementType="Argument">
