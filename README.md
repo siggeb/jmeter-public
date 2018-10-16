@@ -35,6 +35,15 @@ Ask for more cores in the Dv2-series.
 virtual network: es-vnet: 10.0.0.0/16
 subnet: jmeter: 10.0.4.0/24
 
+or via PS:
+New-AzureRmResourceGroup -Name jmeter -Location NorthEurope 
+$virtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName jmeter -Location NorthEurope -Name es-vnet -AddressPrefix 10.0.0.0/16
+$subnetConfig = Add-AzureRmVirtualNetworkSubnetConfig -Name jmeter -AddressPrefix 10.0.4.0/24 -VirtualNetwork $virtualNetwork
+$virtualNetwork | Set-AzureRmVirtualNetwork
+
+get the boss ip:
+Get-AzureRmPublicIpAddress -Name jmeter-pip -ResourceGroupName jmeter
+
 ## Setup infrastructure in bash
 Validate template:
 `time az group deployment validate --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
