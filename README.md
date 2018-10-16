@@ -67,6 +67,8 @@ New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -
 ### Delete deployment via script
 time az group deployment delete --resource-group jmeter --name azuredeploy
 
+Remove-AzureRmResourceGroup -Name jmeter
+
 ### Troubleshooting infrastructure
 Installation log:
 `sudo -i`
