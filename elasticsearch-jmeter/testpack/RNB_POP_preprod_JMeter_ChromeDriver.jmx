@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ChromeDriver" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -240,6 +240,11 @@
           <elementProp name="Login_Password" elementType="Argument">
             <stringProp name="Argument.name">Login_Password</stringProp>
             <stringProp name="Argument.value">${__P(Login_Password, sigge123)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ChromeDriverConfig.chromedriver_args" elementType="Argument">
+            <stringProp name="Argument.name">ChromeDriverConfig.chromedriver_args</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriverConfig.chromedriver_args,--no-sandbox;--disable-dev-shm-usage;--headless;--disable-gpu)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
