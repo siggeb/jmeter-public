@@ -206,8 +206,15 @@ install_chromedriver()
     sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
     
     apt-get -y update  > /dev/null
-    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 google-chrome-stable chromium-chromedriver #> /dev/null
-    sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
+    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 google-chrome-stable #chromium-chromedriver > /dev/null
+    wget -q https://chromedriver.storage.googleapis.com/2.42/chromedriver_linux64.zip
+    unzip chromedriver_linux64.zip
+    sudo mv chromedriver /usr/bin/chromedriver
+    sudo chown root:root /usr/bin/chromedriver
+    sudo chmod +x /usr/bin/chromedriver
+    
+    #why is this symlink needed? 
+    #sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
     
     #log "Installing n"
     #npm install -g n

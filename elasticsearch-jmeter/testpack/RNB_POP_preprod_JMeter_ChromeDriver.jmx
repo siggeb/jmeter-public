@@ -242,6 +242,11 @@
             <stringProp name="Argument.value">${__P(Login_Password, sigge123)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <elementProp name="ChromeDriverConfig.chromedriver_args" elementType="Argument">
+            <stringProp name="Argument.name">ChromeDriverConfig.chromedriver_args</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriverConfig.chromedriver_args,--headless;--disable-gpu;--no-sandbox;)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>

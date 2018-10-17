@@ -32,6 +32,7 @@ Less than 200 CPU cores is handled more promptly, if you need more there is a mo
 Ask for more cores in the Dv2-series. 
 
 ### In portal, create virtual network with subnet (TODO: Script this)
+### If you're using PowerShell you can do this in cli aswell, see below
 virtual network: es-vnet: 10.0.0.0/16
 subnet: jmeter: 10.0.4.0/24
 
@@ -43,17 +44,26 @@ Deploy from root:
 `time az group deployment create --resource-group jmeter --template-file elasticsearch-jmeter/azuredeploy.json --parameters @elasticsearch-jmeter/azuredeploy.parameters.json`
 
 ## If you are a avid windows user and like to work with powershell do this:
-Connect your account:
-Login-AzureRmAccount
+Connect your account:<br />
+`Login-AzureRmAccount`
 
-Select the subscription:
-Select-AzureRmSubscription -SubscriptionName XXX
+Select the subscription:<br />
+`Select-AzureRmSubscription -SubscriptionName {subName}`
 
-Test the template:
-Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json (Error if something is wrong otherwise no output)
+Create ResoruceGroup in azure portal<br />
+`New-AzureRmResourceGroup -Name jmeter -Location NorthEurope`<br />
+`$virtualNetwork = New-AzureRmVirtualNetwork -ResourceGroupName jmeter -Location NorthEurope -Name es-vnet -AddressPrefix 10.0.0.0/16`<br />
+`$subnetConfig = Add-AzureRmVirtualNetworkSubnetConfig -Name jmeter -AddressPrefix 10.0.4.0/24 -VirtualNetwork $virtualNetwork`<br />
+`$virtualNetwork | Set-AzureRmVirtualNetwork`
 
-Deploy the machines based upon the template: (In here you set the machine spec and how many "slave" nodes that will be running the jmx template)
-New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json
+Test the template:<br />
+`Test-AzureRmResourceGroupDeployment -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json` (Error if something is wrong otherwise no output)
+
+Deploy the machines based upon the template: (In here you set the machine spec and how many "slave" nodes that will be running the jmx template)<br />
+`New-AzureRmResourceGroupDeployment -Name azuredeploy -ResourceGroupName jmeter -TemplateFile .\azuredeploy.json -TemplateParameterFile .\azuredeploy.parameters.json`
+
+Delete deployment via PS<br />
+`Remove-AzureRmResourceGroup -Name jmeter`
 
 ### Delete deployment via script
 time az group deployment delete --resource-group jmeter --name azuredeploy
