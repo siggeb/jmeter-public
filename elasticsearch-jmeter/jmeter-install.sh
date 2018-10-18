@@ -158,7 +158,7 @@ install_jmeter()
     mkdir -p /opt/jmeter
     wget -O jmeter.zip https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-4.0.zip
     wget -O JMeterPlugins-Standard-1.4.0.zip http://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.4.0.zip
-	wget -O JMeterPlugins-WebDriver-1.4.0.zip http://jmeter-plugins.org/downloads/file/JMeterPlugins-WebDriver-1.4.0.zip
+	wget -O jpgc-webdriver-2.3.zip https://jmeter-plugins.org/files/packages/jpgc-webdriver-2.3.zip
 	wget -O JMeterPlugins-ExtrasLibs-1.4.0.zip https://jmeter-plugins.org/downloads/file/JMeterPlugins-ExtrasLibs-1.4.0.zip
     
     log "unzipping jmeter"
@@ -166,7 +166,7 @@ install_jmeter()
     
     log "unzipping plugins"
     unzip -q JMeterPlugins-Standard-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
-	unzip -q JMeterPlugins-WebDriver-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
+	unzip -q jpgc-webdriver-2.3.zip -d /opt/jmeter/apache-jmeter-4.0/
 	unzip -q JMeterPlugins-ExtrasLibs-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
      
     chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter-server
