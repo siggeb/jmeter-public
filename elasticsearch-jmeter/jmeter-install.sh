@@ -161,13 +161,16 @@ install_jmeter()
     log "unzipping jmeter"
     unzip -q jmeter.zip -d /opt/jmeter/
     
+    log "installing plugins manager"
+    wget -O /opt/jmeter/apache-jmeter-4.0/lib/ext/jmeter-plugins-manager-1.3.jar https://jmeter-plugins.org/get/
+    
     log "getting test plan"
     wget -O /opt/jmeter/RNB_POP_preprod_JMeter_ChromeDriver.jmx https://raw.githubusercontent.com/siggeb/jmeter-public/master/elasticsearch-jmeter/resources/RNB_POP_preprod_JMeter_ChromeDriver.jmx
     
     log "installing plugins"
-    wget -O /opt/jmeter/apache-jmeter-4.0/lib/cmdrunner-2.0.jar http://search.maven.org/remotecontent?filepath=kg/apc/cmdrunner/2.0/cmdrunner-2.0.jar
-    java -cp /opt/jmeter/apache-jmeter-4.0/lib/ext/jmeter-plugins-manager-0.20.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
-    ./opt/jmeter/apache-jmeter-4.0/bin/PluginsManagerCMD.sh install-for-jmx /opt/jmeter/RNB_POP_preprod_JMeter_ChromeDriver.jmx
+    wget -O /opt/jmeter/apache-jmeter-4.0/lib/cmdrunner-2.2.jar http://search.maven.org/remotecontent?filepath=kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar
+    java -cp /opt/jmeter/apache-jmeter-4.0/lib/ext/jmeter-plugins-manager-1.3.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
+    /opt/jmeter/apache-jmeter-4.0/bin/PluginsManagerCMD.sh install-for-jmx /opt/jmeter/RNB_POP_preprod_JMeter_ChromeDriver.jmx
 
      
     chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter-server
