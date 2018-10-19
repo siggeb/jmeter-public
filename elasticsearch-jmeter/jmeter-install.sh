@@ -157,21 +157,21 @@ install_jmeter()
     
     mkdir -p /opt/jmeter
     wget -O jmeter.zip https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-4.0.zip
-    wget -O JMeterPlugins-Standard-1.4.0.zip http://jmeter-plugins.org/downloads/file/JMeterPlugins-Standard-1.4.0.zip
-	wget -O jpgc-webdriver-2.3.zip https://jmeter-plugins.org/files/packages/jpgc-webdriver-2.3.zip
-	wget -O JMeterPlugins-ExtrasLibs-1.4.0.zip https://jmeter-plugins.org/downloads/file/JMeterPlugins-ExtrasLibs-1.4.0.zip
     
     log "unzipping jmeter"
     unzip -q jmeter.zip -d /opt/jmeter/
     
-    log "unzipping plugins"
-    unzip -q JMeterPlugins-Standard-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
-	unzip -q jpgc-webdriver-2.3.zip -d /opt/jmeter/apache-jmeter-4.0/
-	unzip -q JMeterPlugins-ExtrasLibs-1.4.0.zip -d /opt/jmeter/apache-jmeter-4.0/
+    log "getting test plan"
+    wget -O /opt/jmeter/RNB_POP_preprod_JMeter_ChromeDriver.jmx https://raw.githubusercontent.com/siggeb/jmeter-public/master/elasticsearch-jmeter/resources/RNB_POP_preprod_JMeter_ChromeDriver.jmx
+    
+    log "installing plugins"
+    wget -O /opt/jmeter/apache-jmeter-4.0/lib/cmdrunner-2.0.jar http://search.maven.org/remotecontent?filepath=kg/apc/cmdrunner/2.0/cmdrunner-2.0.jar
+    java -cp /opt/jmeter/apache-jmeter-4.0/lib/ext/jmeter-plugins-manager-0.20.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
+    ./opt/jmeter/apache-jmeter-4.0/bin/PluginsManagerCMD.sh install-for-jmx /opt/jmeter/RNB_POP_preprod_JMeter_ChromeDriver.jmx
+
      
     chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter-server
     chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/jmeter
-    chmod u+x /opt/jmeter/apache-jmeter-4.0/bin/create-rmi-keystore.sh
     
     
     if [ ${IS_MASTER} -ne 1 ]; 
@@ -206,12 +206,12 @@ install_jmeter()
 install_chromedriver()
 {
     log "Installing chromedriver"
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+    #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    #sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
     
     apt-get -y update  > /dev/null
-    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3 google-chrome-stable #chromium-chromedriver > /dev/null
-    wget -q https://chromedriver.storage.googleapis.com/2.42/chromedriver_linux64.zip
+    apt-get -qy install wget default-jre-headless telnet iputils-ping unzip libnss3  #chromium-chromedriver > /dev/null
+    wget -q https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip
     unzip chromedriver_linux64.zip
     sudo mv chromedriver /usr/bin/chromedriver
     sudo chown root:root /usr/bin/chromedriver
