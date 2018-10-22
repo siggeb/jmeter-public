@@ -220,6 +220,12 @@ install_chromedriver()
     sudo chown root:root /usr/bin/chromedriver
     sudo chmod +x /usr/bin/chromedriver
     
+    apt-get install libxss1 libappindicator1 libindicator7
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    dpkg -i google-chrome*.deb
+    apt-get install -f
+    dpkg -i google-chrome*.deb
+    
     #why is this symlink needed? 
     #sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
     
