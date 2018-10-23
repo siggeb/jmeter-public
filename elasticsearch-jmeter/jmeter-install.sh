@@ -130,8 +130,9 @@ update_config_sub()
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/rmi_keystore.jks
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
     #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=true|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4441|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties
 
-    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4441|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties
 
 
     #| sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" 
@@ -145,7 +146,9 @@ update_config_boss()
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
     #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 
-    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 
 
     #| sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" 
@@ -184,14 +187,14 @@ install_jmeter()
     if [ ${IS_MASTER} -ne 1 ]; 
     then
         log "setting up sub node"
-        iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 4441 -j ACCEPT
+        iptables -A INPUT -m state --state NEW -m tcp -p tcp --match multiport --dports 1000:5000 -j ACCEPT
         
         update_config_sub
         install_jmeter_service
     else
         log "setting up boss node"
-        iptables -A INPUT -p tcp --match multiport --dports 4440:4445 -j ACCEPT
-        iptables -A OUTPUT -p tcp --match multiport --dports 4440:4445 -j ACCEPT
+        iptables -A INPUT -p tcp --match multiport --dports 1000:5000 -j ACCEPT
+        iptables -A OUTPUT -p tcp --match multiport --dports 1000:5000 -j ACCEPT
     
         update_config_boss
         
