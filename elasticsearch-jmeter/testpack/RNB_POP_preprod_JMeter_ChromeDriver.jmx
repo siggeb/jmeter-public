@@ -244,7 +244,7 @@
           </elementProp>
           <elementProp name="ChromeDriverConfig.chromedriver_args" elementType="Argument">
             <stringProp name="Argument.name">ChromeDriverConfig.chromedriver_args</stringProp>
-            <stringProp name="Argument.value">${__P(ChromeDriverConfig.chromedriver_args,--headless;--disable-gpu;--no-sandbox;--disable-dev-shm-usage;)}</stringProp>
+            <stringProp name="Argument.value">${__P(ChromeDriverConfig.chromedriver_args,--no-sandbox;--disable-dev-shm-usage;--headless;--disable-gpu)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
