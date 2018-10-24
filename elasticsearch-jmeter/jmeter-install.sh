@@ -128,11 +128,12 @@ EOF
 update_config_sub()
 {
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/rmi_keystore.jks
+    wget -O /opt/jmeter/apache-jmeter-4.0/bin/user.properties https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/user.properties
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
     #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=true|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
     #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|#server.rmi.localport=4000|server.rmi.localport=4441|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties
 
-    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties
 
 
     #| sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" 
@@ -143,12 +144,13 @@ update_config_sub()
 update_config_boss()
 {
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/rmi_keystore.jks
+    wget -O /opt/jmeter/apache-jmeter-4.0/bin/user.properties https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/user.properties
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
     #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 
     #cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|#client.rmi.localport=0|client.rmi.localport=4440|" | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
     
-    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" | sed "s|#server.rmi.ssl.disable=false|server.rmi.ssl.disable=false|" | sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
+    cat /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak | sed "s|remote_hosts=127.0.0.1|remote_hosts=${REMOTE_HOSTS}|" > /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties 
 
 
     #| sed "s|#server.rmi.ssl.keystore.type=JKS|server.rmi.ssl.keystore.type=JKS|" | sed "s|#server.rmi.ssl.keystore.file=rmi_keystore.jks|server.rmi.ssl.keystore.file=/opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks|" | sed "s|#server.rmi.ssl.keystore.password=changeit|server.rmi.ssl.keystore.password=changeit|" | sed "s|#server.rmi.ssl.keystore.alias=rmi|server.rmi.ssl.keystore.alias=rmi|" 
