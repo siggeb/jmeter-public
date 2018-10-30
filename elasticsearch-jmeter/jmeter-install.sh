@@ -127,6 +127,10 @@ EOF
 
 update_config_sub()
 {
+    export LANGUAGE=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export LC_TYPE=en_US.UTF-8
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/rmi_keystore.jks
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/user.properties https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/user.properties
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
@@ -143,6 +147,10 @@ update_config_sub()
 
 update_config_boss()
 {
+    export LANGUAGE=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    export LANG=en_US.UTF-8
+    export LC_TYPE=en_US.UTF-8
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/rmi_keystore.jks https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/rmi_keystore.jks
     wget -O /opt/jmeter/apache-jmeter-4.0/bin/user.properties https://github.com/siggeb/jmeter-public/raw/master/elasticsearch-jmeter/resources/user.properties
     mv /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties /opt/jmeter/apache-jmeter-4.0/bin/jmeter.properties.bak
