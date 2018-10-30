@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jmeterTestPlan version="1.2" properties="4.0" jmeter="4.0 r1823414">
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
   <hashTree>
     <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="ChromeDriver" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
@@ -292,6 +292,7 @@
           <stringProp name="ChromeDriverConfig.chromedriver_path">${Chrome_Driver}</stringProp>
           <boolProp name="ChromeDriverConfig.android_enabled">false</boolProp>
           <boolProp name="ChromeDriverConfig.headless_enabled">true</boolProp>
+          <boolProp name="ChromeDriverConfig.insecurecerts_enabled">false</boolProp>
         </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
         <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Start page" enabled="true"/>
