@@ -24,32 +24,32 @@
           </elementProp>
           <elementProp name="Home_Page" elementType="Argument">
             <stringProp name="Argument.name">Home_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Home_Page,https://prod.na-kd.com)}</stringProp>
+            <stringProp name="Argument.value">${__P(Home_Page,https://production.polarnopyret.se/)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Auth_Code" elementType="Argument">
             <stringProp name="Argument.name">Auth_Code</stringProp>
-            <stringProp name="Argument.value">${__P(Auth_Code,/en?auth_code=1994)}</stringProp>
+            <stringProp name="Argument.value">${__P(Auth_Code,?auth_code=1975)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Product_Category" elementType="Argument">
             <stringProp name="Argument.name">Product_Category</stringProp>
-            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com/en/dresses )}</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page,https://production.polarnopyret.se/barnklader/accessoarer-ovrigt/mossor)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Product_Page" elementType="Argument">
             <stringProp name="Argument.name">Product_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Product_Page,https://prod.na-kd.com.com/en/dresses/mini-dresses/get-the-scoop-tank-mini-dress-5b656a19 )}</stringProp>
+            <stringProp name="Argument.value">${__P(Product_Page,https://production.polarnopyret.se/barnklader/accessoarer-ovrigt/mossor/mossa-randig-barn-rod-60290263-503 )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Second_Product_Category" elementType="Argument">
             <stringProp name="Argument.name">Second_Product_Category</stringProp>
-            <stringProp name="Argument.value">${__P(Second_Product_Category, https://prod.na-kd.com/en/denim )}</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Category, https://preproduction.polarnopyret.se/barnklader/underdelar/byxor--jumpsuits?p_age_group=612 )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Second_Product_Page" elementType="Argument">
             <stringProp name="Argument.name">Second_Product_Page</stringProp>
-            <stringProp name="Argument.value">${__P(Second_Product_Page, https://prod.na-kd.com/en/denim/jeans/distressed-denim-jeans )}</stringProp>
+            <stringProp name="Argument.value">${__P(Second_Product_Page, https://preproduction.polarnopyret.se/barnklader/underdelar/byxor--jumpsuits/jeans-slim-svart-60346770-198 )}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="Checkout" elementType="Argument">
@@ -64,22 +64,22 @@
           </elementProp>
           <elementProp name="Constant_Timer_ms" elementType="Argument">
             <stringProp name="Argument.name">Constant_Timer_ms</stringProp>
-            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 5000)}</stringProp>
+            <stringProp name="Argument.value">${__P(Constant_Timer_ms, 3000)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Browsing_Users" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Browsing_Users</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,150)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Browsing_Users,50)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Ramp_Up_Period_sec" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Ramp_Up_Period_sec</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,50)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Ramp_Up_Period_sec,20)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="PhantomJS_Thread_Loop_Count" elementType="Argument">
             <stringProp name="Argument.name">PhantomJS_Thread_Loop_Count</stringProp>
-            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 1)}</stringProp>
+            <stringProp name="Argument.value">${__P(PhantomJS_Thread_Loop_Count, 2)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="    " elementType="Argument">
@@ -129,7 +129,7 @@
       <hashTree>
         <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
           <collectionProp name="CookieManager.cookies"/>
-          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
           <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
         </CookieManager>
         <hashTree/>
@@ -147,7 +147,7 @@
           <intProp name="WebDriverConfig.socks_port">8080</intProp>
           <stringProp name="WebDriverConfig.no_proxy">localhost</stringProp>
           <boolProp name="WebDriverConfig.maximize_browser">true</boolProp>
-          <boolProp name="WebDriverConfig.reset_per_iteration">false</boolProp>
+          <boolProp name="WebDriverConfig.reset_per_iteration">true</boolProp>
           <boolProp name="WebDriverConfig.dev_mode">false</boolProp>
           <stringProp name="PhantomJSDriverConfig.phantomjs_path">${PhantomJS_Driver}</stringProp>
           <stringProp name="PhantomJSDriverConfig.phantomjs_cli_args"></stringProp>
@@ -185,7 +185,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product Page" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product Page" enabled="false"/>
         <hashTree>
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product Page" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -216,18 +216,33 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Add To Cart" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Add To Cart" enabled="true"/>
         <hashTree>
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="add to cart" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
 var support_ui = JavaImporter(org.openqa.selenium.support.ui.WebDriverWait)
-var conditions = org.openqa.selenium.support.ui.ExpectedConditions
-var wait=new support_ui.WebDriverWait(WDS.browser, 10)
-var exception = null
+var conditions =org.openqa.selenium.support.ui.ExpectedConditions
+var wait = new support_ui.WebDriverWait(WDS.browser, 90)
+
+WDS.browser.get(&apos;${Product_Page}&apos;);
+WDS.browser.manage().window().setSize(new pkg.Dimension(1280, 1024));
+
+wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Lägg i varukorgen&apos;)]]&quot;)));
+var AddToCart = WDS.browser.findElement(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Lägg i varukorgen&apos;)]]&quot;)); 
+
+WDS.sampleResult.sampleStart();
+
+//AddToCart.click(); 
+WDS.browser.executeScript(&quot;arguments[0].click();&quot;, AddToCart) 
+WDS.log.info(&quot;Clicked the köp button&quot;);
+
+//wait.until(conditions.elementToBeClickable(pkg.By.xpath(&quot;//*[text()[contains(.,&apos;Du är kanske också intresserad av&apos;)]]&quot;)));
+
+WDS.sampleResult.sampleEnd();
 
 
-{items: {2-1001-100283-1919-006: {newQuantity: 1, previousQuantity: 0}}, id: 0.021919224286677474}
-data={&quot;items&quot;: {&quot;2-1001-100283-1919-006&quot;: {&quot;newQuantity&quot;: 1, &quot;previousQuantity&quot;: 0}}, &quot;id&quot;: 0.021919224286677474}</stringProp>
+//var btnView = WDS.browser.findElement(pkg.By.xpath(&apos;//*[@id=&quot;ProductPage&quot;]/div/div[2]/div[2]/div[2]/div[2]/button&apos;))
+//WDS.browser.executeScript(&quot;arguments[0].click();&quot;, btnView) </stringProp>
             <stringProp name="WebDriverSampler.parameters"></stringProp>
             <stringProp name="WebDriverSampler.language">javascript</stringProp>
           </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
@@ -240,7 +255,7 @@ data={&quot;items&quot;: {&quot;2-1001-100283-1919-006&quot;: {&quot;newQuantity
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product Category" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Product Category" enabled="false"/>
         <hashTree>
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Product Category" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -271,7 +286,7 @@ WDS.sampleResult.sampleEnd();
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second Product Page" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second Product Page" enabled="false"/>
         <hashTree>
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second Product Page" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
@@ -301,7 +316,7 @@ WDS.sampleResult.sampleEnd(); </stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second Product Category" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Second Product Category" enabled="false"/>
         <hashTree>
           <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="Second Product Category" enabled="true">
             <stringProp name="WebDriverSampler.script">var pkg = JavaImporter(org.openqa.selenium)
